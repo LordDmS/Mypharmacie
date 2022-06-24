@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PHARMACIE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <!-- Menu dorsal-->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="pulse"></ion-icon></span>
+                        <span class="title">My Pharmacie</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="inventaire.html">
+                        <span class="icon"><ion-icon name="podium"></ion-icon></span>
+                        <span class="title">Inventaire</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employe.html">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <span class="title">Employes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="partenaire.html">
+                        <span class="icon"><ion-icon name="people-circle"></ion-icon></span>
+                        <span class="title">Partenaires</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="configuration.html">
+                        <span class="icon"><ion-icon name="cog"></ion-icon></span>
+                        <span class="title">Configurations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vente.html">
+                        <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                        <span class="title">Ventes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="achat.html">
+                        <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                        <span class="title">Achats</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="depense.html">
+                        <span class="icon"><ion-icon name="cash-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Depenses</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <!-- Menu -->
+            <div class="topbar">
+
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Rechercher un employe">                        
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="img/WhatsApp Image 2022-03-19 at 19.43.13 (1).jpeg" alt="">
+                </div>
+
+            </div>
+
+            <!-- chemin -->
+            <div class="chemin">
+                <div class="containt-chemin">
+                    <ion-icon name="people-circle"></ion-icon>
+                    <h4><a href="partenaire.html"> Partenaire ></a></h4>
+                    <h4>Profil</h4>
+                </div>
+            </div>
+
+            <!-- Profil -->
+            <div class="part-profil">
+
+                <!-- employe -->
+                <div class="card-profil-employe">
+                    <div class="card-emp-header">
+                        <div class="img">
+                            <img src="img/banque islamique.jfif" alt="">
+                        </div>
+                        <h4>No: 0031</h4>
+                        <h4>Banque Islamique de Guinee</h4>
+                    </div>
+                    <div class="info-emp">
+                        <div>
+                            <p>Email</p>
+                            <span>banqueislamique@gmail.com</span>
+                        </div>
+                        <div>
+                            <p>Telephone</p>
+                            <span>+224 664 576 928</span>
+                        </div>
+
+                        <div>
+                            <p>RCCM</p>
+                            <span>RG-00obgkhgf-RCCM</span>
+                        </div>
+                        <div>
+                            <p>Code NIF</p>
+                            <span>RG-00okggjk-NIF</span>
+                        </div>
+
+                        <div>
+                            <p>Ville</p>
+                            <span>Conakry</span>
+                        </div>
+                        <div>
+                            <p>Quartier</p>
+                            <span>Centre emetteur</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- diagramme -->
+                <div class="diag-act-part">
+                    <div class="chartbox-part">
+                        <canvas id="myChart-act-part"></canvas>
+                    </div>
+                </div>
+
+            </div>
+            <!-- liste d'activite et de clients-->
+            <div class="details-profil-part">
+
+                <!-- Activite -->
+                <div class="activite-part">
+                    <!-- liste des activites -->
+                    <div class="lst-act-part">
+                        <div class="lst-act-part-containt">
+
+                            <div class="cardheader">
+                                <h2>Liste d'achats</h2>
+                            </div>
+                            <div class="achat-employe">
+                                <table>
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/fb.jpg" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br>
+                                                <span>
+                                                    324 000 GNF 
+                                                    <a href="#"><ion-icon name="eye"></ion-icon></a>
+                                                </span>
+                                            </h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/images (2).jfif" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/images (3).jfif" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/images (4).jfif" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/images (5).jfif" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/téléchargement (1).jfif" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/téléchargement (2).jfif" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/téléchargement.jfif"> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/fb.jpg" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgbx"><img src="img/images (1).jfif" alt=""> </div>
+                                        </td>
+                                        <td>
+                                            <h4>Diallo Amadou Tidiane <br><span>324 000 GNF <a href="#"><ion-icon name="eye"></ion-icon></a></span></h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- liste client -->
+                <div class="liste-client-part">
+                    <div class="partenaire">
+                        <div class="part-header">
+                            <h2>Liste des Clients</h2>
+                        </div>
+                        <div class="part-containt">
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/fb.jpg" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span>tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (1).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (2).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (3).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (4).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (5).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/téléchargement.jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/téléchargement (1).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/téléchargement (2).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/fb.jpg" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (1).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (2).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (3).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (4).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (4).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card-partenaire">
+                                <a href="profil-partenaire.html">
+                                    <div class="img-part">
+                                        <img src="img/images (5).jfif" alt="">
+                                    </div>
+                                    <div class="desc-part">
+                                        <h4>Diallo Amadou Tidiane</h4>
+                                        <span> tidiane@gmail.com</span>
+                                        <p>
+                                            <ion-icon name="location"></ion-icon> Conakry, Kipe</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- footer -->
+            <div class="footer">
+                <div class="footer-containt">
+                    <h2>MY PHARMACY</h2>
+                    <span>© copyright - 2022 Tout droit reserve</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/script-diag-part.js"></script>
+</body>
+
+</html>

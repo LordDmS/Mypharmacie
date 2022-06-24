@@ -1,0 +1,2135 @@
+        @font-face {
+            font-family: Ubuntu-Regular;
+            src: url(font/Ubuntu-Regular.ttf);
+        }
+        
+        @font-face {
+            font-family: Ubuntu-Bold;
+            src: url(font/Ubuntu-Bold.ttf);
+        }
+        
+        @font-face {
+            font-family: Ubuntu-BoldItalic;
+            src: url(font/Ubuntu-BoldItalic.ttf);
+        }
+        
+        @font-face {
+            font-family: Ubuntu-MediumItalic;
+            src: url(font/Ubuntu-MediumItalic.ttf);
+        }
+        
+         :root {
+            --bouton: #1B7541;
+            --fond: #33303027;
+            --border: #33303002;
+            --texte: #000000;
+            --texte2: #444242ad;
+            --contenue: #ffffff;
+            --nuance: #0fce5f49;
+            --conflit: #fa0808f6;
+            --regle: #4dfa08f6;
+            --suspendu: #f6fa08;
+        }
+        
+        a {
+            font-family: Ubuntu-Regular;
+            text-decoration: none;
+            color: var(--texte);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow-x: hidden;
+            min-height: 100vh;
+            overflow-y: auto;
+            font-family: Ubuntu-Regular, sans-serif;
+            background: var(--contenue);
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+        }
+        /* menu dorsal*/
+        
+        .navigation {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            background: var(--fond);
+            border-left: 10px solid var(--border);
+            transition: 0.5s;
+            overflow: hidden;
+        }
+        
+        .navigation.active {
+            width: 80px;
+        }
+        
+        .navigation ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+        .navigation ul li {
+            position: relative;
+            width: 100%;
+            list-style: none;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        
+        .navigation ul li:nth-child(1) {
+            margin-bottom: 60px;
+            pointer-events: none;
+        }
+        
+        .navigation ul li:hover,
+        .navigation ul li.hovered {
+            background: var(--contenue);
+        }
+        
+        .navigation ul li a {
+            position: relative;
+            display: block;
+            display: flex;
+            width: 100%;
+            color: var(--texte);
+        }
+        
+        .navigation ul li:hover a,
+        .navigation ul li.hovered a {
+            color: var(--texte);
+        }
+        
+        .navigation ul li a .icon {
+            position: relative;
+            display: block;
+            min-width: 60px;
+            height: 60px;
+            line-height: 70px;
+            text-align: center;
+            color: var(--bouton);
+        }
+        
+        .navigation ul li a .icon ion-icon {
+            font-size: 25px;
+        }
+        
+        .navigation ul li .title {
+            position: relative;
+            display: block;
+            padding: 0 10px;
+            height: 60px;
+            line-height: 60px;
+            text-align: start;
+            white-space: nowrap;
+        }
+        
+        .navigation ul li:hover a::before,
+        .navigation ul li.hovered a::before {
+            content: '';
+            position: absolute;
+            background: transparent;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            top: -50px;
+            border-radius: 50%;
+            box-shadow: 30px 30px 0 10px var(--contenue);
+            pointer-events: none;
+        }
+        
+        .navigation ul li:hover a::after,
+        .navigation ul li.hovered a::after {
+            content: '';
+            position: absolute;
+            background: transparent;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            bottom: -50px;
+            border-radius: 50%;
+            box-shadow: 30px -30px 0 10px var(--contenue);
+            pointer-events: none;
+        }
+        /* menu*/
+        
+        .main {
+            position: absolute;
+            width: calc(100% - 250px);
+            left: 250px;
+            min-height: 100vh;
+            background: var(--contenue);
+            transition: 0.5s;
+        }
+        
+        .main.active {
+            width: calc(100% - 80px);
+            left: 80px;
+        }
+        
+        .topbar {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            border-left: 1px solid var(--bouton);
+            background: var(--fond);
+        }
+        
+        .toggle {
+            position: relative;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: var(--bouton);
+            cursor: pointer;
+        }
+        
+        .search {
+            position: relative;
+            width: 400px;
+            margin: 0 10px;
+        }
+        
+        .search label {
+            position: relative;
+            width: 100%;
+        }
+        
+        .search label input {
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            padding: 5px 20px;
+            padding-left: 40px;
+            font-size: 16px;
+            outline: none;
+            border: 1px solid var(--bouton);
+        }
+        
+        .search label ion-icon {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            font-size: 20px;
+            color: var(--bouton);
+        }
+        
+        .user {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .user img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .chemin {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .chemin .containt-chemin {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            background: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 3px 5px var(--nuance);
+        }
+        
+        .chemin .containt-chemin h4,
+        .chemin .containt-chemin h4 a {
+            margin-left: 5px;
+            color: var(--texte);
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .chemin .containt-chemin ion-icon {
+            color: var(--bouton);
+        }
+        
+        .chemin .containt-chemin ion-icon {
+            font-size: 20px;
+        }
+        
+        .cardbox {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 10px;
+        }
+        
+        .cardbox .card {
+            position: relative;
+            background: var(--contenue);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 7px 5px var(--nuance);
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        
+        .cardbox .card .numbers {
+            position: relative;
+            font-weight: 500;
+            font-size: 20px;
+            color: var(--bouton);
+        }
+        
+        .cardbox .card .cardname {
+            color: var(--texte2);
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+        .cardbox .card .iconbx a {
+            font-size: 50px;
+            color: var(--bouton);
+        }
+        
+        .cardbox .card:hover {
+            background: var(--bouton);
+        }
+        
+        .cardbox .card:hover .numbers,
+        .cardbox .card:hover .cardname,
+        .cardbox .card:hover .iconbx a {
+            color: var(--contenue);
+        }
+        
+        .details {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 20px;
+        }
+        
+        .details .derniervente {
+            position: relative;
+            display: grid;
+            min-height: 500px;
+            background: var(--contenue);
+            box-shadow: 0px 7px 25px var(--nuance);
+            padding: 20px;
+            border-radius: 20px;
+        }
+        
+        .details .dernierachat .cardheader,
+        .details .derniervente .cardheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .details .dernierachat .cardheader h2,
+        .details .derniervente .cardheader h2 {
+            font-weight: 600;
+            color: var(--bouton);
+            font-size: 15px;
+        }
+        
+        .details .dernierachat .cardheader .btn,
+        .details .derniervente .cardheader .btn {
+            position: relative;
+            padding: 5px;
+            background-color: var(--bouton);
+            color: var(--contenue);
+            border-radius: 6px;
+        }
+        
+        .details table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        .details table tbody td {
+            font-size: 13px;
+        }
+        
+        .details table thead td {
+            font-weight: 600;
+        }
+        
+        .details .derniervente table tr {
+            color: var(--texte2);
+            border-bottom: 1px solid var(--fond);
+        }
+        
+        .details .derniervente table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .details .derniervente table td:last-child {
+            text-align: end;
+        }
+        
+        .details .derniervente table tbody tr:hover {
+            background-color: var(--bouton);
+            color: var(--contenue);
+        }
+        
+        .details .derniervente tr td {
+            padding: 10px;
+        }
+        
+        .status.delivered {
+            padding: 2px 4px;
+            background: var(--regle);
+            color: var(--texte);
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .status.cancel {
+            padding: 2px 4px;
+            background: var(--conflit);
+            color: var(--texte);
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .status.suspendu {
+            padding: 2px 4px;
+            background: var(--suspendu);
+            color: var(--texte);
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .dernierachat {
+            position: relative;
+            display: grid;
+            min-height: 500px;
+            padding: 20px;
+            box-shadow: 0 7px 25px var(--nuance);
+            border-radius: 20px;
+        }
+        
+        .dernierachat .imgbx {
+            position: relative;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .dernierachat .imgbx img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .dernierachat table tr:hover {
+            background: var(--bouton);
+            color: var(--contenue);
+        }
+        
+        .dernierachat table tr td {
+            padding: 12px 10px;
+        }
+        
+        .dernierachat table tr td h4 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+        
+        .dernierachat table tr:hover td h4 span {
+            color: var(--contenue);
+        }
+        
+        .dernierachat table tr td h4 span {
+            font-size: 13px;
+            color: var(--texte2);
+        }
+        
+        .footer {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 20px;
+        }
+        
+        .footer-containt {
+            position: relative;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 7px 25px var(--nuance);
+        }
+        
+        .footer-containt h2 {
+            font-weight: 600;
+            color: var(--bouton);
+            font-size: 20px;
+            line-height: 40px;
+        }
+        
+        .footer-containt span {
+            font-weight: 300;
+            color: var(--texte2);
+        }
+        /* responsive design */
+        
+        @media (max-width: 991px) {
+            .navigation {
+                left: -250px;
+            }
+            .navigation.active {
+                left: 0;
+                width: 250px;
+            }
+            .main {
+                left: 0;
+                width: 100%;
+            }
+            .main.active {
+                left: 250px;
+            }
+            .cardbox {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 800px) {
+            .details {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .footer-containt h2 {
+                font-size: 16px;
+            }
+            .footer-containt span {
+                font-size: 13px;
+            }
+            .dernierachat table tr td {
+                padding: 12px 20px;
+            }
+        }
+        
+        @media (max-width: 536px) {
+            .cardbox {
+                grid-template-columns: repeat(1, 1fr);
+                width: 100%;
+            }
+            .topbar {
+                width: 100%;
+            }
+            .details table thead td {
+                font-size: 13px;
+            }
+            .details .dernierachat .cardheader .btn,
+            .details .derniervente .cardheader .btn {
+                font-size: 12px;
+            }
+            .status.delivered,
+            .status.cancel,
+            .status.suspendu {
+                font-size: 12px;
+            }
+            .dernierachat table tr td h4 {
+                font-size: 14px;
+            }
+            .dernierachat table tr td h4 span {
+                font-size: 12px;
+            }
+            .search {
+                width: 300px;
+            }
+            .search label input {
+                font-size: 13px;
+            }
+            .search label ion-icon {
+                font-size: 20px;
+            }
+            .user {
+                min-width: 40px;
+            }
+            .footer-containt h2 {
+                font-size: 14px;
+            }
+            .footer-containt span {
+                font-size: 11px;
+            }
+        }
+        
+        @media (max-width: 343px) {
+            .main {
+                overflow-x: scroll;
+            }
+            .topbar,
+            .footer,
+            .chemin {
+                min-width: 300px;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page inventaire */
+        /* ########################################## */
+        
+        .details-inventaire {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .header-details {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .header-details h2 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .header-details .btn {
+            padding: 5px 5px 5px 5px;
+            background-color: var(--bouton);
+            border-radius: 5px;
+            color: var(--contenue);
+            margin-left: 20px;
+        }
+        
+        .newproduit {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 25px var(--nuance);
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .liste-rupture-produit {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-column-gap: 10px;
+            max-height: 350px;
+            overflow-x: scroll;
+        }
+        
+        .liste-produit {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-column-gap: 10px;
+        }
+        
+        .cardproduit {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            background: var(--contenue);
+            border-radius: 15px;
+            box-shadow: 0 2px 5px var(--nuance);
+            margin-bottom: 20px;
+        }
+        
+        .imgproduit {
+            position: relative;
+            width: 150px;
+            height: 120px;
+            overflow: hidden;
+            margin: auto;
+        }
+        
+        .imgproduit img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .imgproduit ion-icon {
+            position: relative;
+            color: var(--bouton);
+            font-size: 25px;
+            visibility: hidden;
+        }
+        
+        .imgproduit img:hover {
+            opacity: 0.3;
+        }
+        
+        .imgproduit:hover ion-icon {
+            visibility: visible;
+        }
+        
+        .descproduit {
+            position: relative;
+            line-height: 30px;
+            width: 100%;
+        }
+        
+        .descproduit h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--bouton);
+        }
+        
+        .descproduit span {
+            font-size: 14px;
+            color: var(--texte2);
+        }
+        
+        .Categorie {
+            position: relative;
+            display: grid;
+            min-height: 500px;
+            background: var(--contenue);
+            box-shadow: 0px 7px 25px var(--nuance);
+            padding: 20px;
+            border-radius: 20px;
+            max-height: 200px;
+            overflow-x: scroll;
+        }
+        
+        .fournisseur .cardheader,
+        .Categorie .cardheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .fournisseur .cardheader h2,
+        .Categorie .cardheader h2 {
+            font-weight: 600;
+            color: var(--bouton);
+            font-size: 15px;
+        }
+        
+        .fournisseur .cardheader .btn,
+        .Categorie .cardheader .btn {
+            position: relative;
+            padding: 5px;
+            background-color: var(--bouton);
+            color: var(--contenue);
+            border-radius: 6px;
+        }
+        
+        .Categorie table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        .Categorie table tbody td {
+            font-size: 13px;
+        }
+        
+        .Categorie table thead td {
+            font-weight: 600;
+        }
+        
+        .Categorie table tr {
+            color: var(--texte2);
+            border-bottom: 1px solid var(--fond);
+        }
+        
+        .Categorie table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .Categorie table td:last-child {
+            text-align: end;
+        }
+        
+        .Categorie table tbody tr:hover {
+            background-color: var(--bouton);
+            color: var(--contenue);
+        }
+        
+        .Categorie tr td {
+            padding: 10px;
+        }
+        
+        .fournisseur {
+            position: relative;
+            min-height: 500px;
+            display: grid;
+            padding: 20px;
+            box-shadow: 0 7px 25px var(--nuance);
+            border-radius: 20px;
+            max-height: 200px;
+            overflow-x: scroll;
+        }
+        
+        .fournisseur .imgbx {
+            position: relative;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .fournisseur .imgbx img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .fournisseur table tr:hover {
+            background: var(--bouton);
+            color: var(--contenue);
+        }
+        
+        .fournisseur table tr td {
+            padding: 12px 10px;
+        }
+        
+        .fournisseur table tr td h4 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+        
+        .fournisseur table tr:hover td h4 span {
+            color: var(--contenue);
+        }
+        
+        .fournisseur table tr td h4 span {
+            font-size: 13px;
+            color: var(--texte2);
+        }
+        /* design responsive*/
+        
+        @media (max-width: 1280px) {
+            .liste-produit {
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 10px;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .liste-produit {
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 10px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .liste-produit {
+                overflow-y: scroll;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page details produit */
+        /* ########################################## */
+        
+        .details-produit {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .details-produit-header {
+            position: relative;
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .details-produit-header h2 {
+            font-weight: 600;
+            font-size: 20px;
+            color: var(--bouton);
+        }
+        
+        .details-produit-header .btn {
+            padding: 5px;
+            border-radius: 5px;
+            color: var(--contenue);
+            background-color: var(--conflit);
+        }
+        
+        .details-produit-header .btn-edit {
+            padding: 5px;
+            border-radius: 5px;
+            color: var(--texte);
+            background-color: var(--suspendu);
+        }
+        
+        .details-produit-containt {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            grid-gap: 10px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 5px var(--nuance);
+        }
+        
+        .details-produit-containt .img {
+            position: relative;
+            width: 350px;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .details-produit-containt .img img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .details-produit-containt .desc-header h4 {
+            margin-top: 20px;
+            line-height: 40px;
+            color: var(--bouton);
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .details-produit-containt .desc-containt {
+            position: relative;
+            line-height: 25px;
+            overflow-y: scroll;
+            min-height: 350px;
+            min-width: 400px;
+        }
+        
+        .details-produit-containt .desc-containt p {
+            color: var(--texte);
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        
+        .details-produit-containt .desc-containt p span {
+            color: var(--bouton);
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .details-produit-containt .desc-containt .btn {
+            position: relative;
+            padding: 5px;
+            background-color: var(--bouton);
+            color: var(--contenue);
+            margin: 10px;
+            border-radius: 10px;
+        }
+        /* design responsive */
+        
+        @media (max-width: 760px) {
+            .details-produit-containt {
+                grid-template-columns: 250px 1fr;
+            }
+            .details-produit-containt .img {
+                width: 250px;
+                height: 250px;
+            }
+            .details-produit-containt .desc-containt {
+                min-width: 300px;
+            }
+        }
+        
+        @media (max-width: 654px) {
+            .details-produit-containt {
+                grid-template-columns: repeat(1, 1fr);
+                min-width: 300px;
+            }
+            .details-produit-containt .desc-containt {
+                min-width: 300px;
+            }
+        }
+        
+        @media (max-width: 326px) {
+            .details-produit-containt .desc-containt {
+                min-width: 300px;
+            }
+            .details-produit-header {
+                min-width: 300px;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page produit */
+        /* ########################################## */
+        
+        .liste-produit-total {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-column-gap: 10px;
+            max-height: 350px;
+            overflow-x: scroll;
+        }
+        /* design responsive*/
+        
+        @media (max-width: 1280px) {
+            .liste-produit-total {
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 10px;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .liste-produit-total {
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 10px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .liste-produit-total {
+                overflow-y: scroll;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page employe */
+        /* ########################################## */
+        
+        .employe {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .emp-header {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .emp-header h2 {
+            color: var(--bouton);
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .emp-header .btn {
+            padding: 5px;
+            border-radius: 5px;
+            color: var(--contenue);
+            background-color: var(--bouton);
+        }
+        
+        .emp-containt {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            height: 900px;
+            overflow-x: scroll;
+        }
+        
+        .card-employe {
+            overflow: hidden;
+            position: relative;
+            height: 380px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 10px 12px var(--nuance);
+        }
+        
+        .card-employe .card-emp-header {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            background-color: var(--bouton);
+            padding: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        .card-employe .card-emp-header .img {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            overflow: hidden;
+        }
+        
+        .card-employe .card-emp-header .img img {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            position: absolute;
+        }
+        
+        .card-employe .card-emp-header h4 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 200;
+            color: var(--contenue);
+        }
+        
+        .card-employe .info-emp {
+            position: absolute;
+            width: 100%;
+            top: 200px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        
+        .card-employe .info-emp div {
+            position: relative;
+            min-height: 50px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            line-height: 25px;
+            overflow: hidden;
+        }
+        
+        .card-employe .info-emp div p {
+            font-size: 13px;
+            font-weight: 200;
+            color: var(--texte2);
+        }
+        
+        .card-employe .info-emp div span {
+            font-size: 13px;
+            color: var(--bouton);
+            font-weight: 600;
+        }
+        
+        .btn-emp {
+            position: relative;
+            padding: 10px;
+            top: 15%;
+        }
+        
+        .btn-emp a span {
+            position: relative;
+            width: 100%;
+            background-color: var(--bouton);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: var(--contenue);
+            display: grid;
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        /* design responsive*/
+        
+        @media (max-width: 725px) {
+            .emp-containt {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .emp-containt {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media (max-width: 300px) {
+            .emp-containt {
+                grid-template-columns: repeat(1, 300px);
+                overflow-y: scroll;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page profil employe */
+        /* ########################################## */
+        
+        .emp-profil {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 380px repeat(1, 1fr);
+            grid-gap: 10px
+        }
+        
+        .card-profil-employe {
+            overflow: hidden;
+            position: relative;
+            height: 500px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 10px 12px var(--nuance);
+        }
+        
+        .card-profil-employe .card-emp-header {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            background-color: var(--bouton);
+            padding: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        .card-profil-employe .card-emp-header .img {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            overflow: hidden;
+        }
+        
+        .card-profil-employe .card-emp-header .img img {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            position: absolute;
+        }
+        
+        .card-profil-employe .card-emp-header h4 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 200;
+            color: var(--contenue);
+        }
+        
+        .card-profil-employe .info-emp {
+            position: absolute;
+            width: 100%;
+            top: 200px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        
+        .card-profil-employe .info-emp div {
+            position: relative;
+            min-height: 50px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            line-height: 25px;
+            overflow: hidden;
+        }
+        
+        .card-profil-employe .info-emp div p {
+            font-size: 14px;
+            font-weight: 200;
+            color: var(--texte2);
+        }
+        
+        .card-profil-employe .info-emp div span {
+            font-size: 11px;
+            color: var(--bouton);
+            font-weight: 600;
+        }
+        
+        .activite-emp {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .head-activite-emp {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .head-activite-emp h4 {
+            color: var(--bouton);
+            font-size: 18px;
+        }
+        
+        .containt-activite-emp {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px
+        }
+        
+        .chartbox {
+            margin-top: 50px;
+            min-width: 200px;
+            max-width: 350px;
+        }
+        
+        .liste-activite {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .head-liste-activite {
+            position: relative;
+            width: 100%;
+            display: flex;
+        }
+        
+        .head-liste-activite h4 {
+            color: var(--bouton);
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .containt-liste-activite {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+        
+        .containt-liste-activite .vente-employe {
+            position: relative;
+            display: grid;
+            max-height: 500px;
+            background: var(--contenue);
+            box-shadow: 0px 7px 25px var(--nuance);
+            padding: 20px;
+            border-radius: 20px;
+            overflow-y: scroll;
+        }
+        
+        .containt-liste-activite .achat-employe .cardheader,
+        .containt-liste-activite .vente-employe .cardheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .containt-liste-activite .achat-employe .cardheader h2,
+        .containt-liste-activite .vente-employe .cardheader h2 {
+            font-weight: 600;
+            color: var(--bouton);
+            font-size: 15px;
+        }
+        
+        .containt-liste-activite table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        .containt-liste-activite table tbody td {
+            font-size: 13px;
+        }
+        
+        .containt-liste-activite table thead td {
+            font-weight: 600;
+        }
+        
+        .containt-liste-activite .vente-employe table tr {
+            color: var(--texte2);
+            border-bottom: 1px solid var(--fond);
+        }
+        
+        .containt-liste-activite .vente-employe table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .containt-liste-activite .vente-employe table td:last-child {
+            text-align: end;
+        }
+        
+        .containt-liste-activite .vente-employe table tbody tr:hover {
+            background-color: var(--bouton);
+            color: var(--contenue);
+        }
+        
+        .containt-liste-activite .vente-employe tr td {
+            padding: 10px;
+        }
+        
+        .achat-employe {
+            position: relative;
+            display: grid;
+            max-height: 500px;
+            padding: 20px;
+            box-shadow: 0 7px 25px var(--nuance);
+            border-radius: 20px;
+            overflow-y: scroll;
+        }
+        
+        .achat-employe .imgbx {
+            position: relative;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .achat-employe .imgbx img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .achat-employe table tr:hover {
+            background: var(--bouton);
+            color: var(--contenue);
+        }
+        
+        .achat-employe table tr td {
+            padding: 12px 10px;
+        }
+        
+        .achat-employe table tr td h4 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+        
+        .achat-employe table tr:hover td h4 span {
+            color: var(--contenue);
+        }
+        
+        .achat-employe table tr td h4 span ion-icon {
+            position: relative;
+            left: 10px;
+            color: var(--bouton);
+            font-size: 18px;
+        }
+        
+        .achat-employe table tr:hover td h4 span ion-icon {
+            color: var(--contenue);
+        }
+        
+        .achat-employe table tr td h4 span {
+            font-size: 13px;
+            color: var(--texte2);
+        }
+        /* design responsive */
+        
+        @media (max-width: 991px) {
+            .chartbox {
+                width: 250px;
+                position: relative;
+            }
+            .containt-activite-emp {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 764px) {
+            .containt-liste-activite {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 710px) {
+            .emp-profil {
+                grid-template-columns: 1fr;
+            }
+            .containt-activite-emp {
+                grid-template-columns: 1fr 1fr;
+            }
+            .chartbox {
+                min-width: 200px;
+                position: relative;
+            }
+        }
+        
+        @media(max-width:578px) {
+            .card-profil-employe {
+                width: 380px;
+            }
+            .containt-activite-emp {
+                grid-template-columns: 1fr;
+            }
+            .chartbox {
+                min-width: 350px;
+            }
+        }
+        
+        @media(max-width:450px) {
+            .chartbox {
+                min-width: 100px;
+            }
+        }
+        
+        @media(max-width:420px) {
+            .card-profil-employe {
+                width: 300px;
+            }
+            .containt-liste-activite .vente-employe {
+                max-height: 390px;
+                overflow: scroll;
+            }
+            .achat-employe {
+                width: 350px;
+                overflow: scroll;
+            }
+        }
+        
+        @media(max-width:330px) {
+            .card-profil-employe {
+                height: 680px;
+            }
+            .card-profil-employe .info-emp {
+                grid-template-columns: 1fr;
+            }
+            .card-profil-employe .card-emp-header h4 {
+                font-size: 14px;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page partenaire */
+        /* ########################################## */
+        
+        .partenaire {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .part-header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .part-header a {
+            padding: 5px;
+            color: var(--contenue);
+            background-color: var(--bouton);
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .part-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--bouton);
+        }
+        
+        .part-containt {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            max-height: 300px;
+            overflow-x: scroll;
+        }
+        
+        .card-partenaire {
+            position: relative;
+            background-color: var(--contenue);
+            box-shadow: 0 5px 12px var(--nuance);
+            border-radius: 20px;
+            min-height: 100px;
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        .card-partenaire:hover {
+            background-color: var(--bouton);
+        }
+        
+        .card-partenaire a {
+            position: relative;
+            display: flex;
+        }
+        
+        .card-partenaire a .img-part {
+            position: relative;
+            width: 100px;
+            height: 70px;
+            overflow: hidden;
+            margin: auto;
+        }
+        
+        .card-partenaire a .img-part img {
+            position: absolute;
+            object-fit: contain;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .card-partenaire a .desc-part {
+            position: relative;
+            width: 100%;
+            left: 10px;
+            line-height: 25px;
+        }
+        
+        .card-partenaire a .desc-part h4 {
+            font-size: 16px;
+            color: var(--bouton);
+            font-weight: 600;
+        }
+        
+        .card-partenaire a .desc-part span {
+            font-size: 12px;
+            color: var(--texte2);
+        }
+        
+        .card-partenaire a .desc-part p {
+            font-size: 14px;
+            color: var(--texte);
+        }
+        
+        .card-partenaire:hover a .desc-part p ion-icon {
+            color: var(--suspendu);
+        }
+        
+        .card-partenaire a .desc-part p ion-icon {
+            font-size: 18px;
+            color: var(--bouton);
+        }
+        
+        .card-partenaire:hover a .desc-part p,
+        .card-partenaire:hover a .desc-part span,
+        .card-partenaire:hover a .desc-part h4 {
+            color: var(--contenue);
+        }
+        /* design responsive*/
+        
+        @media (max-width: 800px) {
+            .part-containt {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .part-containt {
+                overflow-y: scroll;
+            }
+            .card-partenaire {
+                min-width: 350px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .part-containt {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .card-partenaire {
+                min-width: 250px;
+                min-height: 100;
+                overflow-x: scroll;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page profil partenaire */
+        /* ########################################## */
+        
+        .part-profil {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 380px repeat(1, 1fr);
+            grid-gap: 30px
+        }
+        
+        .diag-act-part {
+            position: relative;
+            width: 100%;
+            padding: 50px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+        }
+        
+        .activite-part {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        
+        .chartbox-part {
+            max-width: 400px;
+            margin: auto;
+        }
+        
+        .details-profil-part {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 400px 2fr;
+            grid-gap: 10px
+        }
+        
+        .lst-act-part {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .cardheader {
+            position: relative;
+            display: flex;
+            color: var(--bouton);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .lst-act-part-containt {
+            position: relative;
+            width: 100%;
+        }
+        
+        .lst-act-part-containt .achat-employe .cardheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .lst-act-part-containt .achat-employe .cardheader h2 {
+            font-weight: 600;
+            color: var(--bouton);
+            font-size: 15px;
+        }
+        
+        .liste-client-part {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            height: 575px;
+        }
+        
+        .liste-client-part .partenaire {
+            position: relative;
+            width: 100%;
+        }
+        
+        .liste-client-part .part-header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .liste-client-part .part-containt {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            max-height: 470px;
+            overflow-y: scroll;
+        }
+        
+        .liste-client-part .card-partenaire {
+            position: relative;
+            background-color: var(--contenue);
+            box-shadow: 0 5px 12px var(--nuance);
+            border-radius: 20px;
+            min-height: 110px;
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        .liste-client-part .card-partenaire:hover {
+            background-color: var(--bouton);
+        }
+        
+        .liste-client-part .card-partenaire a {
+            position: relative;
+            display: flex;
+        }
+        
+        .liste-client-part .card-partenaire a .img-part {
+            position: relative;
+            width: 75px;
+            height: 65px;
+            overflow: hidden;
+            margin: auto;
+        }
+        
+        .liste-client-part .card-partenaire a .img-part img {
+            position: absolute;
+            object-fit: cover;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .liste-client-part .card-partenaire a .desc-part {
+            position: relative;
+            width: 100%;
+            left: 10px;
+            line-height: 25px;
+        }
+        
+        .liste-client-part .card-partenaire a .desc-part h4 {
+            font-size: 16px;
+            color: var(--bouton);
+            font-weight: 600;
+        }
+        
+        .liste-client-part .card-partenaire a .desc-part span {
+            font-size: 12px;
+            color: var(--texte2);
+        }
+        
+        .liste-client-part .card-partenaire a .desc-part p {
+            font-size: 14px;
+            color: var(--texte);
+        }
+        
+        .liste-client-part .card-partenaire:hover a .desc-part p ion-icon {
+            color: var(--suspendu);
+        }
+        
+        .liste-client-part .card-partenaire a .desc-part p ion-icon {
+            font-size: 18px;
+            color: var(--bouton);
+        }
+        
+        .liste-client-part .card-partenaire:hover a .desc-part p,
+        .liste-client-part .card-partenaire:hover a .desc-part span,
+        .liste-client-part .card-partenaire:hover a .desc-part h4 {
+            color: var(--contenue);
+        }
+        /* design responsive*/
+        
+        @media (max-width: 1200px) {
+            .liste-client-part .part-containt {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .diag-act-part .chartbox-part {
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 846px) {
+            .diag-act-part .chartbox-part {
+                max-width: 200px;
+            }
+            .details-profil-part {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 757px) {
+            .part-profil {
+                grid-template-columns: 1fr;
+            }
+            .diag-act-part .chartbox-part {
+                max-width: 350px;
+            }
+        }
+        
+        @media (max-width: 521px) {
+            .diag-act-part .chartbox-part {
+                max-width: 250px;
+            }
+        }
+        
+        @media (max-width: 393px) {
+            .diag-act-part .chartbox-part {
+                max-width: 200px;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page configuration */
+        /* ########################################## */
+        
+        .configuration {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .config-pharma {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 650px;
+        }
+        
+        .info-pharma {
+            position: relative;
+            padding: 15px;
+            display: flex;
+            border-radius: 15px;
+            box-shadow: 0 7px 12px var(--nuance);
+            overflow: hidden;
+        }
+        
+        .img-info-pharma {
+            position: relative;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        
+        .img-info-pharma img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .desc-info-pharma {
+            position: relative;
+            overflow: hidden;
+            line-height: 30px;
+            margin-right: 20px;
+        }
+        
+        .desc-info-pharma h4 {
+            color: var(--bouton);
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .desc-info-pharma h4 a {
+            margin-left: 10px;
+            padding: 5px;
+            background-color: var(--bouton);
+            color: var(--contenue);
+            border-radius: 5px;
+        }
+        
+        .desc-info-pharma h4 a ion-icon {
+            align-items: center;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        
+        .desc-info-pharma span {
+            color: var(--texte2);
+            font-size: 12px;
+        }
+        
+        .desc-info-pharma p ion-icon {
+            font-size: 18px;
+            color: var(--bouton);
+        }
+        
+        .desc-info-pharma p {
+            color: var(--texte);
+            font-weight: 400;
+            font-size: 13px;
+        }
+        
+        .conf-objectif {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .config-objectif-vente {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .head-c-o-v {
+            position: relative;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .head-c-o-v h4 {
+            color: var(--bouton);
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .containt-c-o-v {
+            position: relative;
+            overflow: hidden;
+            margin-left: 10%;
+        }
+        
+        .containt-c-o-v .chartbox-conf {
+            position: relative;
+            max-width: 350px;
+        }
+        
+        .config-objectif-vente {
+            position: relative;
+            width: 100%;
+        }
+        
+        .config-user-table {
+            position: relative;
+            width: 100%;
+            padding-right: 20px;
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            grid-gap: 10px
+        }
+        
+        .config-table {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .config-table .head-config-table {
+            position: relative;
+            display: flex;
+            width: 100%;
+        }
+        
+        .config-table .head-config-table h2 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .config-table .containt-config-table {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .config-table .containt-config-table .card-config-table {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 30px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            height: 40px;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        .config-table .containt-config-table .card-config-table p {
+            color: var(--texte2);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .config-table .containt-config-table .card-config-table ion-icon {
+            font-size: 16px;
+            color: var(--bouton);
+        }
+        /* design css */
+        
+        @media(max-width:900px) {
+            .config-table .containt-config-table {
+                grid-template-columns: 1fr;
+            }
+            .card-profil-employe {
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media(max-width:700px) {
+            .config-user-table {
+                grid-template-columns: 1fr;
+            }
+            .info-pharma {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 500px;
+            }
+            .img-info-pharma {
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media(max-width:540px) {
+            .info-pharma {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                max-width: 300px;
+            }
+            .desc-info-pharma {
+                margin-bottom: 20px;
+            }
+            .conf-objectif {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }

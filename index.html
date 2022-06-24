@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PHARMACIE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <!-- Menu dorsal-->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="pulse"></ion-icon></span>
+                        <span class="title">My Pharmacie</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="inventaire.html">
+                        <span class="icon"><ion-icon name="podium"></ion-icon></span>
+                        <span class="title">Inventaire</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employe.html">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <span class="title">Employes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="partenaire.html">
+                        <span class="icon"><ion-icon name="people-circle"></ion-icon></span>
+                        <span class="title">Partenaires</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="configuration.html">
+                        <span class="icon"><ion-icon name="cog"></ion-icon></span>
+                        <span class="title">Configurations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vente.html">
+                        <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                        <span class="title">Ventes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="achat.html">
+                        <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                        <span class="title">Achats</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="depense.html">
+                        <span class="icon"><ion-icon name="cash-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Depenses</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <!-- Menu -->
+            <div class="topbar">
+
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Rechercher un produit">                        
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="img/WhatsApp Image 2022-03-19 at 19.43.13 (1).jpeg" alt="">
+                </div>
+
+            </div>
+
+            <!-- chemin -->
+            <div class="chemin">
+                <div class="containt-chemin">
+                    <ion-icon name="home"></ion-icon>
+                    <h4>Accueil</h4>
+                </div>
+            </div>
+
+            <!-- cards -->
+            <div class="cardbox">
+
+                <div class="card">
+                    <div>
+                        <a href="#">
+                            <div class="numbers">12345</div>
+                            <div class="cardname">Mon Stock</div>
+                        </a>
+                    </div>
+                    <div class="iconbx">
+                        <a href="#">
+                            <ion-icon name="server"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <a href="#">
+                            <div class="numbers">12345</div>
+                            <div class="cardname">Groupe</div>
+                        </a>
+                    </div>
+                    <div class="iconbx">
+                        <a href="#">
+                            <ion-icon name="albums-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <a href="#">
+                            <div class="numbers">12345</div>
+                            <div class="cardname">Rupture</div>
+                        </a>
+                    </div>
+                    <div class="iconbx">
+                        <a href="#">
+                            <ion-icon name="warning-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <a href="#">
+                            <div class="numbers">12345</div>
+                            <div class="cardname">Fournisseur</div>
+                        </a>
+                    </div>
+                    <div class="iconbx">
+                        <a href="#">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="details">
+                <!-- liste dernier vente -->
+                <div class="derniervente">
+                    <div class="cardheader">
+                        <h2>Dernieres Ventes</h2>
+                        <a href="#" class="btn">
+                            <ion-icon name="eye"></ion-icon>
+                        </a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>No Vente</td>
+                                <td>Date et Heure</td>
+                                <td>Total Net</td>
+                                <td>Statut</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status cancel">Annulee</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status suspendu">Suspendue</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status cancel">Annulee</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status cancel">Annulee</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>10/06/2022 - 19:04:03</td>
+                                <td>75 000 GNF</td>
+                                <td><span class="status delivered">Livree</span> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Dernier Client -->
+                <div class="dernierachat">
+                    <div class="cardheader">
+                        <h2>Derniers Achats</h2>
+                        <a href="#" class="btn">
+                            <ion-icon name="eye"></ion-icon>
+                        </a>
+                    </div>
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbx"><img src="img/fb.jpg" alt=""> </div>
+                            </td>
+                            <td>
+                                <h4>Diallo Amadou Tidiane <br><span>NSIA Assurance</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbx"><img src="img/images (5).jfif" alt=""> </div>
+                            </td>
+                            <td>
+                                <h4>Diallo Amadou Tidiane <br><span>NSIA Assurance</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbx"><img src="img/images (4).jfif" alt=""> </div>
+                            </td>
+                            <td>
+                                <h4>Diallo Amadou Tidiane <br><span>NSIA Assurance</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbx"><img src="img/images (3).jfif" alt=""> </div>
+                            </td>
+                            <td>
+                                <h4>Diallo Amadou Tidiane <br><span>NSIA Assurance</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbx"><img src="img/images (2).jfif" alt=""> </div>
+                            </td>
+                            <td>
+                                <h4>Diallo Amadou Tidiane <br><span>NSIA Assurance</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbx"><img src="img/images (1).jfif" alt=""> </div>
+                            </td>
+                            <td>
+                                <h4>Diallo Amadou Tidiane <br><span>NSIA Assurance</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbx"><img src="img/téléchargement.jfif" alt=""> </div>
+                            </td>
+                            <td>
+                                <h4>Diallo Amadou Tidiane <br><span>NSIA Assurance</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <!-- footer -->
+            <div class="footer">
+                <div class="footer-containt">
+                    <h2>MY PHARMACY</h2>
+                    <span>© copyright - 2022 Tout droit reserve</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
