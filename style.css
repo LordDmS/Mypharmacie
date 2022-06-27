@@ -160,6 +160,10 @@
             box-shadow: 30px -30px 0 10px var(--contenue);
             pointer-events: none;
         }
+        
+        .navigation .titlenav {
+            cursor: pointer;
+        }
         /* menu*/
         
         .main {
@@ -297,7 +301,6 @@
             box-shadow: 0 7px 5px var(--nuance);
             display: flex;
             justify-content: space-between;
-            cursor: pointer;
             margin-bottom: 20px;
         }
         
@@ -2132,4 +2135,276 @@
             .conf-objectif {
                 grid-template-columns: repeat(1, 1fr);
             }
+        }
+        /* ########################################## */
+        /* Style pour la page stock */
+        /* ########################################## */
+        
+        .stock {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .stock .monstock {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+        }
+        
+        .monstock .head-monstock {
+            display: flex;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .monstock .head-monstock h2 {
+            font-size: 18px;
+            color: var(--bouton);
+        }
+        
+        .monstock .head-monstock div ion-icon {
+            padding: 5px;
+            align-items: center;
+            background-color: var(--bouton);
+            border-radius: 5px;
+            color: var(--contenue);
+            font-size: 15px;
+        }
+        
+        .monstock .containt-monstock {
+            position: relative;
+            width: 100%;
+            max-height: 500px;
+            overflow-x: scroll;
+        }
+        
+        .containt-monstock table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        .containt-monstock table tbody td {
+            font-size: 13px;
+        }
+        
+        .containt-monstock table thead td {
+            font-weight: 600;
+        }
+        
+        .containt-monstock table tr {
+            color: var(--texte2);
+            border-bottom: 1px solid var(--fond);
+        }
+        
+        .containt-monstock table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .containt-monstock table td:last-child {
+            text-align: end;
+        }
+        
+        .containt-monstock table tbody tr:hover {
+            background-color: var(--bouton);
+            color: var(--contenue);
+        }
+        
+        .containt-monstock tr td {
+            padding: 10px;
+        }
+        /* ########################################## */
+        /* Style pour la page groupe medicament */
+        /* ########################################## */
+        
+        .groupe-medicament {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .groupe-medicament .containt-group {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .containt-group .head-containt-group {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .containt-group .head-containt-group h2 {
+            color: var(--bouton);
+            font-size: 18px;
+        }
+        
+        .containt-group .head-containt-group div {
+            position: relative;
+        }
+        
+        .containt-group .head-containt-group div a {
+            position: relative;
+            background-color: var(--bouton);
+            padding: 5px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        
+        .containt-group .head-containt-group div a ion-icon {
+            align-items: center;
+            color: var(--contenue);
+        }
+        
+        .containt-group .cardbox-group {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+        
+        .containt-group .cardbox-group .card-group {
+            position: relative;
+            margin-bottom: 5px;
+            background-color: var(--contenue);
+            border-radius: 10px;
+            box-shadow: 0 7px 12px var(--nuance);
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .containt-group .cardbox-group .card-group p {
+            color: var(--texte);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .containt-group .cardbox-group .card-group p span {
+            color: var(--texte2);
+            font-size: 12px;
+        }
+        
+        .containt-group .cardbox-group .card-group a {
+            color: var(--bouton);
+            font-size: 20px;
+        }
+        /* design reponsive*/
+        
+        @media(max-width:850px) {
+            .containt-group .cardbox-group {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media(max-width:670px) {
+            .containt-group .cardbox-group {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:450px) {
+            .containt-group .cardbox-group {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .containt-group .head-containt-group h2 {
+                font-size: 12px;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page groupe medicament */
+        /* ########################################## */
+        
+        .approvisionement {
+            position: relative;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .head-appro {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .head-appro h2 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .containt-appro {
+            position: relative;
+            padding: 15px;
+            width: 100%;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+            display: grid;
+            grid-template-columns: 200px 1fr 100px;
+        }
+        
+        .containt-appro .appro-produit {
+            position: relative;
+            width: 100%;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        
+        .appro-produit .img-card-appro {
+            position: relative;
+            width: 200px;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .appro-produit .img-card-appro img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .appro-produit .desc-card-appro {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            line-height: 25px;
+        }
+        
+        .appro-produit .desc-card-appro h4 {
+            color: var(--bouton);
+            font-size: 15px;
+        }
+        
+        .appro-produit .desc-card-appro p {
+            color: var(--texte2);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .appro-produit .desc-card-appro p span {
+            color: var(--bouton);
+            font-size: 12px;
+            margin-left: 5px;
         }
