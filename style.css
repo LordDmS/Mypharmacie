@@ -2356,7 +2356,7 @@
             border-radius: 20px;
             box-shadow: 0 7px 12px var(--nuance);
             display: grid;
-            grid-template-columns: 200px 1fr 100px;
+            grid-template-columns: 200px 400px 100px;
         }
         
         .containt-appro .appro-produit {
@@ -2407,4 +2407,200 @@
             color: var(--bouton);
             font-size: 12px;
             margin-left: 5px;
+        }
+        
+        .appro-fournisseur .fournisseur {
+            position: relative;
+            min-height: 380px;
+            display: grid;
+            padding: 20px;
+            box-shadow: 0 7px 25px var(--nuance);
+            border-radius: 20px;
+            overflow-x: scroll;
+        }
+        /* ########################################## */
+        /* Style pour la page Fournisseur */
+        /* ########################################## */
+        
+        .list-fournisseur {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            overflow: hidden;
+        }
+        
+        .list-fournisseur .head-list-four {
+            position: relative;
+            width: 100%;
+            display: flex;
+            padding: 15px;
+        }
+        
+        .list-fournisseur .head-list-four h2 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600px;
+        }
+        
+        .list-fournisseur .containt-list-four {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            overflow-x: scroll;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            max-height: 400px;
+            overflow-x: scroll;
+        }
+        
+        .containt-list-four .card-four {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            grid-gap: 10px;
+            margin-bottom: 20px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            padding: 5px;
+            align-items: center;
+        }
+        
+        .containt-list-four .card-four .img-four {
+            position: relative;
+            overflow: hidden;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        
+        .containt-list-four .card-four .img-four img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .containt-list-four .card-four .desc-four {
+            position: relative;
+            width: 100%;
+            line-height: 25px;
+        }
+        
+        .containt-list-four .card-four .desc-four h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--bouton);
+        }
+        
+        .containt-list-four .card-four .desc-four h4 span {
+            color: var(--texte);
+            font-weight: 100;
+        }
+        
+        .containt-list-four .card-four:hover {
+            background: var(--bouton);
+        }
+        
+        .containt-list-four .card-four:hover h4,
+        .containt-list-four .card-four:hover h4 span {
+            color: var(--contenue);
+        }
+        /* design responsive */
+        
+        @media(max-width:900px) {
+            .list-fournisseur .containt-list-four {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media(max-width:700px) {
+            .list-fournisseur .containt-list-four {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:500px) {
+            .list-fournisseur .containt-list-four {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page details fournisseur */
+        /* ########################################## */
+        
+        .d-fournisseur {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .d-fournisseur .profil-four {
+            position: relative;
+            max-width: 800px;
+            padding: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr;
+            grid-gap: 10px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .profil-four .img-four {
+            position: relative;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
+        .profil-four .img-four img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .profil-four .desc-info-four {
+            position: relative;
+            width: 100%;
+            line-height: 35px;
+        }
+        
+        .profil-four .desc-info-four h4 {
+            color: var(--bouton);
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .profil-four .desc-info-four h4 a ion-icon {
+            color: var(--contenue);
+            margin-left: 20px;
+            padding: 5px;
+            align-items: center;
+            background-color: var(--bouton);
+            border-radius: 5px;
+        }
+        
+        .profil-four .desc-info-four span {
+            color: var(--texte2);
+            font-size: 12px;
+        }
+        
+        .profil-four .desc-info-four p {
+            color: var(--texte);
+            font-size: 14px;
+        }
+        
+        .profil-four .desc-info-four p ion-icon {
+            color: var(--bouton);
+            font-size: 20px;
         }

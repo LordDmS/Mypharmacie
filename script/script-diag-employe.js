@@ -3,7 +3,7 @@ const ctx1 = document.getElementById('myChart-vente-emp').getContext('2d');
 const myChart1 = new Chart(ctx1, {
     type: 'doughnut',
     data: {
-        labels: ['Ventes mensuel', 'Mes ventes'],
+        labels: ['Ventes mensuelle', 'Mes ventes'],
         datasets: [{
             label: '# of Votes',
             data: [2000, 433],

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PHARMACIE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <!-- Menu dorsal-->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="pulse"></ion-icon></span>
+                        <span class="title">My Pharmacie</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="inventaire.html">
+                        <span class="icon"><ion-icon name="podium"></ion-icon></span>
+                        <span class="title">Inventaire</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employe.html">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <span class="title">Employes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="partenaire.html">
+                        <span class="icon"><ion-icon name="people-circle"></ion-icon></span>
+                        <span class="title">Partenaires</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="configuration.html">
+                        <span class="icon"><ion-icon name="cog"></ion-icon></span>
+                        <span class="title">Configurations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vente.html">
+                        <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                        <span class="title">Ventes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="achat.html">
+                        <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                        <span class="title">Achats</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="depense.html">
+                        <span class="icon"><ion-icon name="cash-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Depenses</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <!-- Menu -->
+            <div class="topbar">
+
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Rechercher un fournisseur">                        
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="img/WhatsApp Image 2022-03-19 at 19.43.13 (1).jpeg" alt="">
+                </div>
+
+            </div>
+
+            <!-- chemin -->
+            <div class="chemin">
+                <div class="containt-chemin">
+                    <ion-icon name="home"></ion-icon>
+                    <h4><a href="index.html">Accueil ></a></h4>
+                    <h4><a href="fournisseur.html">Fournisseur ></a></h4>
+                    <h4>Details Fournisseur</h4>
+                </div>
+            </div>
+
+            <!-- Details fournisseur-->
+            <div class="d-fournisseur">
+
+                <!-- fournisseur -->
+                <div class="profil-four">
+
+                    <div class="img-four">
+                        <img src="img/fournisseur/govlogo.png" alt="">
+                    </div>
+
+                    <div class="desc-info-four">
+                        <h4>
+                            PHARMAGUI
+                            <a href="#">
+                                <ion-icon name="pencil"></ion-icon>
+                            </a>
+                        </h4>
+                        <span>Tel: +224 (622 005 160 / 664 576 928) </span>
+                        <p>
+                            <ion-icon name="location"></ion-icon> Conakry, Constantain
+                        </p>
+                    </div>
+
+                    <div class="desc-info-four">
+                        <h4>
+                            RCCM: xxxxxxxxxxxx
+                        </h4>
+                        <span>Email: pharmagui@gmail.com</span>
+                        <h4>
+                            Code NIF: xxxxxxxxxxxx
+                        </h4>
+                    </div>
+
+                </div>
+
+                <!-- Statistiques de livraison -->
+                <div class="conf-objectif">
+
+                    <!-- mensuelle -->
+                    <div class="config-objectif-vente">
+
+                        <div class="head-c-o-v">
+                            <h4>Livraison Mensuelle</h4>
+                        </div>
+
+                        <div class="containt-c-o-v">
+
+                            <div class="chartbox-conf">
+                                <canvas id="myChart-liv-mois"></canvas>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- annuelle -->
+                    <div class="config-objectif-vente">
+
+                        <div class="head-c-o-v">
+                            <h4>Livraison Mensuelle</h4>
+                        </div>
+
+                        <div class="containt-c-o-v">
+
+                            <div class="chartbox-conf">
+                                <canvas id="myChart-liv-an"></canvas>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Liste des Livraisons -->
+                <div class="livraison-four">
+                    <div class="head-livraison-four">
+                        <h2>Mes Livraisons</h2>
+                    </div>
+                    <div class="containt-livraison">
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- footer -->
+            <div class="footer">
+                <div class="footer-containt">
+                    <h2>MY PHARMACY</h2>
+                    <span>© copyright - 2022 Tout droit reserve</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/script-diag-fournisseur.js"></script>
+</body>
+
+</html>
