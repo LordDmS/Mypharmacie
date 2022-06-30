@@ -266,6 +266,8 @@
             background: var(--contenue);
             border-radius: 20px;
             box-shadow: 0 3px 5px var(--nuance);
+            min-width: 290px;
+            overflow: hidden;
         }
         
         .chemin .containt-chemin h4,
@@ -552,6 +554,13 @@
         }
         
         @media (max-width: 536px) {
+            .chemin .containt-chemin h4,
+            .chemin .containt-chemin h4 a {
+                font-size: 14px;
+            }
+            .chemin .containt-chemin ion-icon {
+                font-size: 15px;
+            }
             .cardbox {
                 grid-template-columns: repeat(1, 1fr);
                 width: 100%;
@@ -597,13 +606,29 @@
             }
         }
         
+        @media(max-width:450px) {
+            .chemin .containt-chemin h4,
+            .chemin .containt-chemin h4 a {
+                font-size: 11px;
+            }
+            .chemin .containt-chemin ion-icon {
+                font-size: 12px;
+            }
+        }
+        
         @media (max-width: 343px) {
             .main {
                 overflow-x: scroll;
             }
+            .chemin .containt-chemin h4,
+            .chemin .containt-chemin h4 a {
+                font-size: 11px;
+            }
+            .chemin .containt-chemin ion-icon {
+                font-size: 12px;
+            }
             .topbar,
-            .footer,
-            .chemin {
+            .footer {
                 min-width: 300px;
             }
         }
@@ -653,7 +678,7 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-column-gap: 10px;
-            max-height: 350px;
+            max-height: 650px;
             overflow-x: scroll;
         }
         
@@ -2218,6 +2243,9 @@
         .containt-monstock tr td {
             padding: 10px;
         }
+        /*Design responsive*/
+        
+        @media(max-width) {}
         /* ########################################## */
         /* Style pour la page groupe medicament */
         /* ########################################## */
@@ -2324,7 +2352,7 @@
             }
         }
         /* ########################################## */
-        /* Style pour la page groupe medicament */
+        /* Style pour la page groupe approvisionement */
         /* ########################################## */
         
         .approvisionement {
@@ -2355,68 +2383,213 @@
             background-color: var(--contenue);
             border-radius: 20px;
             box-shadow: 0 7px 12px var(--nuance);
-            display: grid;
-            grid-template-columns: 200px 400px 100px;
+            overflow: hidden;
+            margin-bottom: 20px;
         }
         
-        .containt-appro .appro-produit {
+        .containt-appro .desc-appro {
             position: relative;
             width: 100%;
+            display: grid;
+            grid-template-columns: 400px 400px;
+            grid-gap: 20px;
+            overflow: hidden;
+        }
+        
+        .desc-appro .details-appro-produit {
+            position: relative;
+            max-width: 400px;
+            display: flex;
             background-color: var(--contenue);
             box-shadow: 0 7px 12px var(--nuance);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            max-height: 100px;
+            padding: 10px;
             overflow: hidden;
-            top: 0;
-            left: 0;
         }
         
-        .appro-produit .img-card-appro {
+        .desc-appro .details-appro-produit:hover {
+            background-color: var(--bouton);
+        }
+        
+        .details-appro-produit .img-card-appro {
             position: relative;
-            width: 200px;
-            height: 250px;
+            width: 120px;
+            height: 80px;
             overflow: hidden;
         }
         
-        .appro-produit .img-card-appro img {
+        .details-appro-produit .img-card-appro img {
             position: absolute;
             width: 100%;
             height: 100%;
             object-fit: contain;
+            left: 0;
+            top: 0;
         }
         
-        .appro-produit .desc-card-appro {
+        .details-appro-produit .desc-card-appro {
+            position: relative;
+            left: 10px;
+            width: 100%;
+            line-height: 25px;
+            align-items: center;
+        }
+        
+        .details-appro-produit .desc-card-appro h4 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .details-appro-produit .desc-card-appro p {
+            color: var(--texte2);
+            font-size: 14px;
+        }
+        
+        .details-appro-produit .desc-card-appro p span {
+            color: var(--bouton);
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .details-appro-fournisseur:hover .desc-four h4 span,
+        .details-appro-fournisseur:hover .desc-four h4,
+        .details-appro-produit:hover .desc-card-appro p,
+        .details-appro-produit:hover .desc-card-appro p span,
+        .details-appro-produit:hover .desc-card-appro h4 {
+            color: var(--contenue);
+        }
+        
+        .containt-appro .details-appro-fournisseur {
+            position: relative;
+            max-width: 400px;
+            display: flex;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            padding: 10px;
+            max-height: 100px;
+        }
+        
+        .containt-appro .details-appro-fournisseur:hover {
+            background-color: var(--bouton);
+        }
+        
+        .details-appro-fournisseur .img-four {
+            position: relative;
+            width: 120px;
+            height: 80px;
+            overflow: hidden;
+        }
+        
+        .details-appro-fournisseur .img-four img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            left: 0;
+            top: 0;
+        }
+        
+        .details-appro-fournisseur .desc-four {
             position: relative;
             width: 100%;
-            padding: 15px;
+            margin-left: 10px;
             line-height: 25px;
         }
         
-        .appro-produit .desc-card-appro h4 {
+        .details-appro-fournisseur .desc-four h4 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .details-appro-fournisseur .desc-four h4 span {
+            color: var(--texte2);
+            font-size: 14px;
+            font-weight: 100;
+        }
+        
+        .containt-appro .approvisionner {
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            padding: 20px;
+            max-width: 350px;
+        }
+        
+        .approvisionner .title-containt-appro {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .approvisionner .title-containt-appro h4 {
             color: var(--bouton);
             font-size: 15px;
         }
         
-        .appro-produit .desc-card-appro p {
-            color: var(--texte2);
-            font-size: 14px;
-            font-weight: 600;
-        }
-        
-        .appro-produit .desc-card-appro p span {
-            color: var(--bouton);
-            font-size: 12px;
-            margin-left: 5px;
-        }
-        
-        .appro-fournisseur .fournisseur {
+        .approvisionner .containt-approvisionner {
             position: relative;
-            min-height: 380px;
-            display: grid;
-            padding: 20px;
-            box-shadow: 0 7px 25px var(--nuance);
+            width: 100%;
+        }
+        
+        .approvisionner .containt-approvisionner input {
+            height: 30px;
+            padding-left: 15px;
+            border: 1px solid var(--bouton);
             border-radius: 20px;
-            overflow-x: scroll;
+            margin-right: 10px;
+            max-width: 250px;
+        }
+        
+        .approvisionner .containt-approvisionner a {
+            position: relative;
+            padding: 5px 15px;
+            background-color: var(--bouton);
+            color: var(--contenue);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        /* Design responsive */
+        
+        @media(max-width:880px) {
+            .containt-appro .desc-appro {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:700px) {
+            .containt-appro .desc-appro {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media(max-width:410px) {
+            .approvisionner {
+                width: 350px;
+                overflow: hidden;
+            }
+            .approvisionner .containt-approvisionner {
+                width: 350px;
+                overflow: hidden;
+            }
+            .approvisionner .containt-approvisionner a {
+                margin-bottom: 20px;
+            }
+            .approvisionner .containt-approvisionner input {
+                width: 150px;
+            }
+            .approvisionement {
+                width: 400px;
+                overflow-y: scroll;
+            }
         }
         /* ########################################## */
         /* Style pour la page Fournisseur */
@@ -2546,7 +2719,7 @@
             overflow: hidden;
             margin-bottom: 20px;
             display: grid;
-            grid-template-columns: 100px 1fr 1fr;
+            grid-template-columns: 100px repeat(2, 1fr);
             grid-gap: 10px;
             background-color: var(--contenue);
             border-radius: 20px;
@@ -2603,4 +2776,281 @@
         .profil-four .desc-info-four p ion-icon {
             color: var(--bouton);
             font-size: 20px;
+        }
+        
+        .livraison-four {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            overflow-y: hidden;
+            margin-top: 20px;
+        }
+        
+        .livraison-four .head-livraison-four {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .livraison-four .head-livraison-four h2 {
+            color: var(--bouton);
+            font-size: 18px;
+        }
+        
+        .livraison-four .head-livraison-four ion-icon {
+            padding: 5px;
+            background-color: var(--bouton);
+            color: var(--contenue);
+            border-radius: 5px;
+            align-items: center;
+        }
+        
+        .containt-livraison {
+            position: relative;
+            width: 100%;
+            padding-bottom: 20px;
+            overflow-x: scroll;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            margin-top: 20px;
+            max-height: 500px;
+        }
+        
+        .containt-livraison .card-livraison {
+            position: relative;
+            width: 100%;
+            display: flex;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 5px;
+        }
+        
+        .card-livraison .img-liv {
+            position: relative;
+            overflow: hidden;
+            width: 100px;
+            height: 70px;
+        }
+        
+        .card-livraison .img-liv img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .card-livraison .desc-liv {
+            position: relative;
+            left: 10px;
+            line-height: 20px;
+        }
+        
+        .card-livraison .desc-liv h4 {
+            color: var(--bouton);
+            font-size: 15px;
+        }
+        
+        .card-livraison .desc-liv span {
+            color: var(--texte2);
+            font-size: 12px;
+        }
+        
+        .card-livraison .desc-liv p {
+            color: var(--texte);
+            font-size: 14px;
+        }
+        
+        .card-livraison:hover {
+            background-color: var(--bouton);
+        }
+        
+        .card-livraison:hover .desc-liv h4,
+        .card-livraison:hover .desc-liv span,
+        .card-livraison:hover .desc-liv p {
+            color: var(--contenue);
+        }
+        /* design responsive */
+        
+        @media(max-width:900px) {
+            .containt-livraison {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:650px) {
+            .containt-livraison {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .d-fournisseur .profil-four {
+                grid-template-columns: 200px 1fr;
+            }
+            .profil-four .desc-info-four {
+                line-height: 25px;
+            }
+        }
+        
+        @media(max-width:500px) {
+            .d-fournisseur .profil-four {
+                grid-template-columns: 1fr;
+            }
+            .containt-livraison {
+                width: 300px;
+            }
+            .profil-four {
+                width: 250px;
+            }
+        }
+        /* ########################################## */
+        /* Style pour le maodal */
+        /* ########################################## */
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 10vh;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: var(--fond);
+            background-color: var(--texte2);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            width: 80vh;
+            height: 80vh;
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: 60px 1fr 60px;
+        }
+        
+        .head-modal {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            background-color: var(--fond);
+            align-items: center;
+        }
+        
+        .close {
+            color: var(--contenue);
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px 10px;
+            align-items: center;
+            background-color: var(--bouton);
+            border-radius: 10px;
+        }
+        
+        .close:hover,
+        .close:focus {
+            background-color: var(--conflit);
+            color: var(--contenue);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .body-modal {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .foot-modal {
+            position: relative;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: var(--fond);
+            align-items: center;
+        }
+        
+        .foot-modal h2 {
+            color: var(--bouton);
+            font-size: 14px;
+        }
+        
+        .foot-modal span {
+            color: var(--texte2);
+            font-size: 11px;
+        }
+        /* ########################################## */
+        /* Style pour rupture de stock */
+        /* ########################################## */
+        
+        .body-modal .head-list-four {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .liste-four-modal {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px
+        }
+        
+        .liste-four-modal .card-four {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+        }
+        
+        .liste-four-modal .card-four .img-four {
+            position: relative;
+            height: 40px;
+            width: 60px;
+            overflow: hidden;
+        }
+        
+        .liste-four-modal .card-four .img-four img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .liste-four-modal .card-four .desc-four {
+            position: relative;
+            width: 100%;
+            margin-left: 10px;
+            line-height: 20px;
+        }
+        
+        .liste-four-modal .card-four .desc-four h4 {
+            color: var(--bouton);
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .liste-four-modal .card-four .desc-four h4 span {
+            color: var(--texte2);
+            font-size: 11px;
+            font-weight: 100px;
+        }
+        
+        .rupture {
+            position: relative;
+            width: 100%;
+            padding: 20px;
         }

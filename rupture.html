@@ -100,7 +100,7 @@
                 <div class="containt-chemin">
                     <ion-icon name="home"></ion-icon>
                     <h4><a href="index.html">Accueil ></a></h4>
-                    <h4>Groupe Medicament</h4>
+                    <h4>Rupture de Stock</h4>
                 </div>
             </div>
 
@@ -123,143 +123,280 @@
 
             </div>
 
-            <!-- Rupture de stock -->
-            <div class="newproduit">
-                <div class="header-details">
-                    <h2>Rupture de stock</h2>
+            <!-- modal liste fournisseur -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+
+                    <div class="head-modal">
+                        <span class="close">&times;</span>
+                        <p>Liste Fournisseur</p>
+                    </div>
+
+                    <div class="body-modal">
+
+                        <div class="head-list-four">
+                            <div class="search">
+                                <label>
+                                    <input type="text" placeholder="Rechercher un fournisseur">                        
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="liste-four-modal">
+
+                            <div class="card-four">
+
+                                <a href="approvisionement.html">
+                                    <div class="img-four">
+                                        <img src="img/fournisseur/govlogo.png" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="desc-four">
+                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
+                                </div>
+
+                            </div>
+
+                            <div class="card-four">
+
+                                <a href="approvisionement.html">
+                                    <div class="img-four">
+                                        <img src="img/fournisseur/images (1).jfif" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="desc-four">
+                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
+                                </div>
+
+                            </div>
+
+                            <div class="card-four">
+
+                                <a href="approvisionement.html">
+                                    <div class="img-four">
+                                        <img src="img/fournisseur/images (2).jfif" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="desc-four">
+                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
+                                </div>
+
+                            </div>
+
+                            <div class="card-four">
+
+                                <a href="approvisionement.html">
+                                    <div class="img-four">
+                                        <img src="img/fournisseur/images (4).jfif" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="desc-four">
+                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
+                                </div>
+
+                            </div>
+
+                            <div class="card-four">
+
+                                <a href="approvisionement.html">
+                                    <div class="img-four">
+                                        <img src="img/fournisseur/Logo-PHA-600x600-e1542146973645.png" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="desc-four">
+                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
+                                </div>
+
+                            </div>
+
+                            <div class="card-four">
+
+                                <a href="approvisionement.html">
+                                    <div class="img-four">
+                                        <img src="img/fournisseur/parks-and-horticulture-authority-pha-lahore-logo-0AA1453ED1-seeklogo.com.png" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="desc-four">
+                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
+                                </div>
+
+                            </div>
+
+                            <div class="card-four">
+
+                                <a href="approvisionement.html">
+                                    <div class="img-four">
+                                        <img src="img/fournisseur/pha-logo.png" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="desc-four">
+                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="foot-modal">
+                        <h2>MY PHARMACY</h2>
+                        <span>© copyright - 2022 Tout droit reserve</span>
+                    </div>
+
                 </div>
-                <div class="liste-rupture-produit">
 
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/doliprane.jpeg" alt="">
-                            <a href="approvisionement.html">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>25 Boite</h4>
-                        </div>
+            </div>
+
+            <!-- Rupture de stock -->
+            <div class="rupture">
+
+                <div class="newproduit">
+                    <div class="header-details">
+                        <h2>Rupture de stock</h2>
                     </div>
+                    <div class="liste-rupture-produit">
 
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/isoni.jpg">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/doliprane.jpeg" alt="">
+                                <a id="myBtn">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>25 Boite</h4>
+                            </div>
                         </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>20 Boite</h4>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/isoni.jpg">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>20 Boite</h4>
+                            </div>
                         </div>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/isoniazide.jpg" alt="">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>25 Boite</h4>
+                            </div>
+                        </div>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/rifa.jpg" alt="">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>5 Boite</h4>
+                            </div>
+                        </div>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/Pyrazinamide.jpg" alt="">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>25 Boite</h4>
+                            </div>
+                        </div>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/Ethambutol.jpg" alt="">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>25 Boite</h4>
+                            </div>
+                        </div>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/composition-avec-le-paquet-deux-de-bayer-aspirine-poznan-pôle-janvier-marque-d-médicament-populaire-premier-et-plus-connu-170083106.jpg" alt="">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>25 Boite</h4>
+                            </div>
+                        </div>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/csm_EUS_Personal_Care_Pharma_03_e37cb70c55.jpg" alt="">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>25 Boite</h4>
+                            </div>
+                        </div>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/bio-oil-huile-soin.jpg" alt="">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>25 Boite</h4>
+                            </div>
+                        </div>
+
+                        <div class="cardproduit">
+                            <div class="imgproduit">
+                                <img src="img/product_8324855hd.jpg" alt="">
+                                <a href="#">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="descproduit">
+                                <span>Doliprane</span>
+                                <h4>25 Boite</h4>
+                            </div>
+                        </div>
+
                     </div>
-
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/isoniazide.jpg" alt="">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>25 Boite</h4>
-                        </div>
-                    </div>
-
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/rifa.jpg" alt="">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>5 Boite</h4>
-                        </div>
-                    </div>
-
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/Pyrazinamide.jpg" alt="">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>25 Boite</h4>
-                        </div>
-                    </div>
-
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/Ethambutol.jpg" alt="">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>25 Boite</h4>
-                        </div>
-                    </div>
-
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/composition-avec-le-paquet-deux-de-bayer-aspirine-poznan-pôle-janvier-marque-d-médicament-populaire-premier-et-plus-connu-170083106.jpg" alt="">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>25 Boite</h4>
-                        </div>
-                    </div>
-
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/csm_EUS_Personal_Care_Pharma_03_e37cb70c55.jpg" alt="">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>25 Boite</h4>
-                        </div>
-                    </div>
-
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/bio-oil-huile-soin.jpg" alt="">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>25 Boite</h4>
-                        </div>
-                    </div>
-
-                    <div class="cardproduit">
-                        <div class="imgproduit">
-                            <img src="img/product_8324855hd.jpg" alt="">
-                            <a href="#">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="descproduit">
-                            <span>Doliprane</span>
-                            <h4>25 Boite</h4>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
@@ -278,6 +415,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/script-modal.js"></script>
 </body>
 
 </html>
