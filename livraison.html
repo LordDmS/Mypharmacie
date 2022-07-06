@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PHARMACIE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <!-- Menu dorsal-->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="pulse"></ion-icon></span>
+                        <span class="title">My Pharmacie</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="inventaire.html">
+                        <span class="icon"><ion-icon name="podium"></ion-icon></span>
+                        <span class="title">Inventaire</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employe.html">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <span class="title">Employes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="partenaire.html">
+                        <span class="icon"><ion-icon name="people-circle"></ion-icon></span>
+                        <span class="title">Partenaires</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="configuration.html">
+                        <span class="icon"><ion-icon name="cog"></ion-icon></span>
+                        <span class="title">Configurations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vente.html">
+                        <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                        <span class="title">Ventes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="achat.html">
+                        <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                        <span class="title">Achats</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="depense.html">
+                        <span class="icon"><ion-icon name="cash-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Depenses</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <!-- Menu -->
+            <div class="topbar">
+
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Rechercher une livraison">                        
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="img/WhatsApp Image 2022-03-19 at 19.43.13 (1).jpeg" alt="">
+                </div>
+
+            </div>
+
+            <!-- chemin -->
+            <div class="chemin">
+                <div class="containt-chemin">
+                    <ion-icon name="home"></ion-icon>
+                    <h4><a href="index.html">Accueil ></a></h4>
+                    <h4><a href="fournisseur.html">Fournisseur ></a></h4>
+                    <h4><a href="Details-fournisseur.html">Details (PHARMAGUI) ></a></h4>
+                    <h4>Livraison</h4>
+                </div>
+            </div>
+            <!-- modal liste fournisseur -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+
+                    <div class="head-modal">
+                        <span class="close">&times;</span>
+                        <p>Details Livraison</p>
+                    </div>
+
+                    <div class="body-modal">
+
+                        <div class="livraison-modal">
+
+                            <div class="head-livraison-modal">
+                                <h2>Livraison: 0002344</h2>
+                                <div>
+                                    <a href="#">
+                                        <ion-icon name="trash"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="containt-livraison-modal">
+
+                                <div class="row1-mod-liv">
+                                    <div class="img-livraison">
+                                        <img src="img/doliprane.jpeg" alt="">
+                                    </div>
+                                    <h4>Doliprane</h4>
+                                </div>
+
+                                <div class="row2-mod-liv">
+                                    <p>Quantite: <span>150 Boite(s)</span></p>
+                                    <p>Date: <span>15:22 01/07/2022</span></p>
+                                    <p>Bon de livraison: <span><a href="#"><ion-icon name="eye"></ion-icon></a></span></p>
+                                    <p>Etat: <span>Recu</span></p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="foot-modal">
+                        <h2>MY PHARMACY</h2>
+                        <span>© copyright - 2022 Tout droit reserve</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Livraison -->
+            <div class="livraison">
+
+                <div class="head-livraison">
+                    <h2>Livraison</h2>
+                    <div>
+                        <a href="">
+                            <ion-icon name="arrow-down-circle"></ion-icon>
+                        </a>
+                        <a href="">
+                            <ion-icon name="arrow-up-circle"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="containt-list-liv">
+
+                    <div class="card-livraison">
+
+                        <div class="img-liv">
+                            <a id="myBtn">
+                                <img src="img/doliprane.jpeg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="desc-liv">
+                            <h4>Doliprane</h4>
+                            <p>Quantite: 150 Boite</p>
+                            <span>Date: 28/06/2022 12:28:04</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-livraison">
+
+                        <div class="img-liv">
+                            <a id="myBtn">
+                                <img src="img/doliprane.jpeg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="desc-liv">
+                            <h4>Doliprane</h4>
+                            <p>Quantite: 150 Boite</p>
+                            <span>Date: 28/06/2022 12:28:04</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-livraison">
+
+                        <div class="img-liv">
+                            <a id="myBtn">
+                                <img src="img/doliprane.jpeg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="desc-liv">
+                            <h4>Doliprane</h4>
+                            <p>Quantite: 150 Boite</p>
+                            <span>Date: 28/06/2022 12:28:04</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-livraison">
+
+                        <div class="img-liv">
+                            <a id="myBtn">
+                                <img src="img/doliprane.jpeg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="desc-liv">
+                            <h4>Doliprane</h4>
+                            <p>Quantite: 150 Boite</p>
+                            <span>Date: 28/06/2022 12:28:04</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-livraison">
+
+                        <div class="img-liv">
+                            <a id="myBtn">
+                                <img src="img/doliprane.jpeg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="desc-liv">
+                            <h4>Doliprane</h4>
+                            <p>Quantite: 150 Boite</p>
+                            <span>Date: 28/06/2022 12:28:04</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-livraison">
+
+                        <div class="img-liv">
+                            <a id="myBtn">
+                                <img src="img/doliprane.jpeg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="desc-liv">
+                            <h4>Doliprane</h4>
+                            <p>Quantite: 150 Boite</p>
+                            <span>Date: 28/06/2022 12:28:04</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-livraison">
+
+                        <div class="img-liv">
+                            <a id="myBtn">
+                                <img src="img/doliprane.jpeg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="desc-liv">
+                            <h4>Doliprane <span class="stat livree">R</span></h4>
+                            <p>Quantite: 150 Boite</p>
+                            <span>Date: 28/06/2022 12:28:04</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- footer -->
+            <div class="footer">
+                <div class="footer-containt">
+                    <h2>MY PHARMACY</h2>
+                    <span>© copyright - 2022 Tout droit reserve</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/script-modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/script-diag-fournisseur.js"></script>
+</body>
+
+</html>

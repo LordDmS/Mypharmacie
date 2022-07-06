@@ -1,0 +1,31 @@
+/* design responsive */
+
+@media(max-width:900px) {
+    .containt-livraison {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:650px) {
+    .containt-livraison {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .d-fournisseur .profil-four {
+        grid-template-columns: 200px 1fr;
+    }
+    .profil-four .desc-info-four {
+        line-height: 25px;
+    }
+}
+
+@media(max-width:500px) {
+    .d-fournisseur .profil-four {
+        grid-template-columns: 1fr;
+    }
+    .containt-livraison {
+        width: 300px;
+    }
+    .profil-four {
+        width: 250px;
+    }
+}

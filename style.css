@@ -53,7 +53,8 @@
         
         .container {
             position: relative;
-            width: 100%;
+            max-width: 1500px;
+            margin: auto;
         }
         /* menu dorsal*/
         
@@ -730,6 +731,7 @@
         
         .imgproduit:hover ion-icon {
             visibility: visible;
+            cursor: pointer;
         }
         
         .descproduit {
@@ -2811,16 +2813,147 @@
             width: 100%;
             padding-bottom: 20px;
             overflow-x: scroll;
+            max-height: 400px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-gap: 10px;
             margin-top: 20px;
-            max-height: 500px;
+            padding: 20px;
         }
         
-        .containt-livraison .card-livraison {
+        .livraison-card {
             position: relative;
             width: 100%;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+            max-width: 350px;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            overflow: hidden;
+            height: 50px;
+        }
+        
+        .livraison-card .desc-livraison-card p {
+            color: var(--texte2);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .livraison-card .desc-livraison-card p span {
+            color: var(--bouton);
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .livraison-card .action-livraison-card {
+            position: relative;
+            width: 25px;
+        }
+        
+        .livraison-card .action-livraison-card .details-liv {
+            color: var(--bouton);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .livraison-card .action-livraison-card .sup-liv {
+            color: var(--conflit);
+            font-size: 20px;
+        }
+        /*Design resonsive*/
+        
+        @media(max-width:1160px) {
+            .containt-livraison {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media(max-width:700px) {
+            .containt-livraison {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .d-fournisseur .profil-four {
+                grid-template-columns: 200px 1fr;
+            }
+            .profil-four .desc-info-four {
+                line-height: 25px;
+            }
+        }
+        
+        @media(max-width:500px) {
+            .containt-livraison {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media(max-width:450px) {
+            .d-fournisseur .profil-four {
+                grid-template-columns: 300px;
+            }
+            .containt-livraison {
+                width: 300px;
+            }
+            .profil-four {
+                width: 250px;
+            }
+        }
+        
+        @media(max-width:350px) {
+            .containt-livraison {
+                grid-template-columns: 350px;
+            }
+        }
+        /* ########################################## */
+        /* Style pour le maodal fouritures(livraison) */
+        /* ########################################## */
+        
+        .livraison {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .head-livraison {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .head-livraison h2 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .head-livraison div a ion-icon {
+            position: relative;
+            padding: 5px;
+            align-items: center;
+            background-color: var(--bouton);
+            border-radius: 10px;
+            color: var(--contenue);
+        }
+        
+        .containt-list-liv {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 10px;
+            max-height: 350px;
+            overflow-y: scroll;
+        }
+        
+        .containt-list-liv .card-livraison {
+            position: relative;
+            max-width: 350px;
             display: flex;
             background-color: var(--contenue);
             box-shadow: 0 7px 12px var(--nuance);
@@ -2843,6 +2976,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            cursor: pointer;
         }
         
         .card-livraison .desc-liv {
@@ -2874,37 +3008,6 @@
         .card-livraison:hover .desc-liv span,
         .card-livraison:hover .desc-liv p {
             color: var(--contenue);
-        }
-        /* design responsive */
-        
-        @media(max-width:900px) {
-            .containt-livraison {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media(max-width:650px) {
-            .containt-livraison {
-                grid-template-columns: repeat(1, 1fr);
-            }
-            .d-fournisseur .profil-four {
-                grid-template-columns: 200px 1fr;
-            }
-            .profil-four .desc-info-four {
-                line-height: 25px;
-            }
-        }
-        
-        @media(max-width:500px) {
-            .d-fournisseur .profil-four {
-                grid-template-columns: 1fr;
-            }
-            .containt-livraison {
-                width: 300px;
-            }
-            .profil-four {
-                width: 250px;
-            }
         }
         /* ########################################## */
         /* Style pour le maodal */
@@ -2966,7 +3069,8 @@
         .body-modal {
             position: relative;
             width: 100%;
-            padding: 20px;
+            padding: 10px;
+            overflow: hidden;
         }
         
         .foot-modal {
@@ -3032,7 +3136,7 @@
         
         .liste-four-modal .card-four .desc-four {
             position: relative;
-            width: 100%;
+            max-width: 100%;
             margin-left: 10px;
             line-height: 20px;
         }
@@ -3051,6 +3155,43 @@
         
         .rupture {
             position: relative;
-            width: 100%;
+            max-width: 100%;
             padding: 20px;
+            overflow: hidden;
+        }
+        
+        .list-rupture {
+            position: relative;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 20px;
+            max-height: 500px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        /* Design responsive */
+        
+        @media(max-width:1280px) {
+            .list-rupture {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media(max-width:920px) {
+            .list-rupture {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media(max-width:700px) {
+            .list-rupture {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:700px) {
+            .list-rupture {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }

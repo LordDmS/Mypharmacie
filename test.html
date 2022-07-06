@@ -100,70 +100,66 @@
                 <div class="containt-chemin">
                     <ion-icon name="home"></ion-icon>
                     <h4><a href="index.html">Accueil ></a></h4>
-                    <h4><a href="rupture.html">Rupture de Stock ></a></h4>
-                    <h4> Approvisionement</h4>
+                    <h4>Groupe Medicament</h4>
                 </div>
             </div>
 
-            <!-- Approvisionement -->
-            <div class="approvisionement">
+            <!-- cards -->
+            <div class="cardbox">
 
-                <div class="head-appro">
-                    <h2>Approvisionner</h2>
+                <div class="card">
+                    <div>
+                        <div class="numbers">12345</div>
+                        <div class="cardname">Groupe</div>
+                    </div>
+                    <div class="iconbx">
+                        <a>
+                            <ion-icon name="albums-outline"></ion-icon>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="containt-appro">
+            </div>
 
-                    <!--details appro-->
-                    <div class="desc-appro">
+            <div>
 
-                        <!-- Fournisseur -->
-                        <div class="details-appro-fournisseur">
 
-                            <a href="approvisionement.html">
-                                <div class="img-four">
-                                    <img src="img/fournisseur/govlogo.png" alt="">
-                                </div>
-                            </a>
-
-                            <div class="desc-four">
-                                <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                            </div>
-
-                        </div>
-
-                        <!-- Produit -->
-                        <div class="details-appro-produit">
-
-                            <div class="img-card-appro">
-                                <img src="img/doliprane.jpeg" alt="">
-                            </div>
-
-                            <div class="desc-card-appro">
-                                <h4>Doliprane</h4>
-                                <p>Prix: <span> 25 000 GNF</span></p>
-                                <p>Quantite:<span> 25  Boite</span></p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- approvisionner -->
-                    <div class="approvisionner">
-
-                        <div class="title-containt-appro">
-                            <h4>Entrez la quantite d'approvisionement</h4>
-                        </div>
-
-                        <div class="containt-approvisionner">
-                            <input type="number" placeholder="Entrer la quantite">
-                            <a href="#">Valider</a>
-                        </div>
-
-                    </div>
-
+                <div class="w3-container">
+                    <h2>Tabs</h2>
                 </div>
+
+                <div class="w3-bar w3-black">
+                    <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
+                    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+                    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+                </div>
+
+                <div>
+                    <div id="London" class="w3-container city">
+                        <h2>London</h2>
+                        <p>London is the capital city of England.</p>
+                    </div>
+
+                    <div id="Paris" class="w3-container city" style="display:none">
+                        <h2>Paris</h2>
+                        <p>Paris is the capital of France.</p>
+                    </div>
+
+                    <div id="Tokyo" class="w3-container city" style="display:none">
+                        <h2>Tokyo</h2>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                </div>
+                <script>
+                    function openCity(cityName) {
+                        var i;
+                        var x = document.getElementsByClassName("city");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        document.getElementById(cityName).style.display = "block";
+                    }
+                </script>
 
             </div>
 
