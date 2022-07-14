@@ -106,36 +106,238 @@
 
             <!-- Details-produit -->
             <div class="details-produit">
+
                 <div class="details-produit-header">
-                    <h2>Details Produit</h2>
-                    <a href="#" class="btn">
-                        <ion-icon name="trash"></ion-icon>
-                    </a>
-                    <a href="#" class="btn-edit">
-                        <ion-icon name="pencil"></ion-icon>
-                    </a>
-                </div>
-                <div class="details-produit-containt">
-                    <div class="img">
-                        <img src="img/doliprane.jpeg" alt="">
-                    </div>
-                    <div class="desc">
-                        <div class="desc-header">
-                            <h4>Produit: Doliprane</h4>
-                        </div>
-                        <div class="desc-containt">
-                            <a href="#" class="btn"> antalgique</a> <a href="#" class="btn">antipyrétique</a> <br>
-                            <p>
-                                Ce médicament contient du paracétamol. Il est utilisé pour faire baisser la fièvre et dans le traitement des affections douloureuses. Les formes orales dosées à 1000 mg sont également indiquées dans le traitement des douleurs de l'arthrose.
-                            </p>
-                            <p>
-                                <br>Prix: <span>25 000 Gnf</span><br> Quantite: <span>250 Boite de 8 comprimet</span>
-                            </p>
-                        </div>
+                    <h2>Produit: Doliprane 1000mg </h2>
+                    <div>
+                        <a href="#" class="btn">
+                            <ion-icon name="trash"></ion-icon>
+                        </a>
+                        <a href="#" class="btn-edit">
+                            <ion-icon name="pencil"></ion-icon>
+                        </a>
                     </div>
                 </div>
 
+                <div class="details-produit-containt">
+
+                    <div class="col-image">
+                        <p>Référence : <span> 3400936461680 </span></p>
+                        <div class="img-produit">
+                            <img src="img/doliprane.jpeg" alt="">
+                        </div>
+                        <div class="row-img">
+                            <p>Les informations aux précautions d'emploi (interactions médicamenteuses, contre-indications, mises en garde spéciales, effets indésirables...) ainsi que la posologie sont détaillées par la notice du médicament.</p>
+                            <a id="myBtn">Voir la notice</a>
+                        </div>
+                    </div>
+
+                    <div class="desc-produit">
+
+                        <h3>Médicament / Anti-fievre</h3>
+
+                        <div class="row1">
+                            <h4>Unite: Boites </h4>
+                            <a href="#">Fabricant</a>
+                        </div>
+
+                        <div class="row2">
+                            <p>
+                                Sans ordonnance, ce médicament est indiqué en cas de douleur et/ou fièvre : maux de tête, états grippaux, douleurs dentaires, courbatures, règles douloureuses. Il peut également être prescrit en cas d'arthrose.
+                            </p>
+                        </div>
+
+                        <div class="row-interdit">
+
+                            <div class="img-interdit">
+                                <img src="img/mode.jpg" alt="">
+                            </div>
+                            <p>Mode d'administration ?</p>
+                            <span>Voie orale</span>
+
+                        </div>
+
+                        <div class="row-interdit">
+
+                            <div class="img-interdit">
+                                <img src="img/alettement.jpg" alt="">
+                            </div>
+                            <p>Allaitement ?</p>
+                            <span>Interdit</span>
+
+                        </div>
+
+                        <div class="row-interdit">
+
+                            <div class="img-interdit">
+                                <img src="img/Femme-enceinte.png" alt="">
+                            </div>
+                            <p>Femme enceinte ?</p>
+                            <span>Sur avis du Medecin</span>
+
+                        </div>
+                        <h4>Forme: <span>Comprimé</span></h4>
+                        <h1>25 000 Gnf</h1>
+                        <p>Etat: <span class="etat-produit normale"> En Stock </span></p>
+
+
+                    </div>
+
+                    <div class="prix-produit">
+                        <div class="produit-simulaire">
+
+                            <div class="head-prod-sim">
+                                <h2>Dans la meme Categorie</h2>
+                            </div>
+
+                            <div class="containt-prod-sim">
+
+                                <div class="card-prod-sim">
+                                    <a href="#">
+                                        <div class="img-card-prod-sim">
+                                            <img src="img/composition-avec-le-paquet-deux-de-bayer-aspirine-poznan-pôle-janvier-marque-d-médicament-populaire-premier-et-plus-connu-170083106.jpg" alt="">
+                                        </div>
+                                        <div class="desc-prod-sim">
+                                            <p>Aspirin Fast</p>
+                                            <h4>34 800 GNF</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="card-prod-sim">
+                                    <a href="#">
+                                        <div class="img-card-prod-sim">
+                                            <img src="img/csm_EUS_Personal_Care_Pharma_03_e37cb70c55.jpg" alt="">
+                                        </div>
+                                        <div class="desc-prod-sim">
+                                            <p>Vitamin C</p>
+                                            <h4>53 500 GNF</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="card-prod-sim">
+                                    <a href="#">
+                                        <div class="img-card-prod-sim">
+                                            <img src="img/bio-oil-huile-soin.jpg" alt="">
+                                        </div>
+                                        <div class="desc-prod-sim">
+                                            <p>Bi-Oil</p>
+                                            <h4>74 500 GNF</h4>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
+
+            <!-- modal liste fourniture -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+
+                    <div class="head-modal">
+                        <span class="close">&times;</span>
+                        <p>Notice: Doliprane 1000mg</p>
+                    </div>
+
+                    <div class="body-modal">
+
+                        <!--Notice-->
+                        <div class="notice">
+
+                            <div class="containt-notice">
+                                <h4>Indications thérapeutiques</h4>
+                                <p>Ce médicament est indiqué en cas de douleur et/ou fièvre telles que maux de tête, états grippaux, douleurs dentaires, courbatures, règles douloureuses. Il peut également être prescrit par votre médecin dans les douleurs
+                                    de l'arthrose. Cette présentation est réservée à l'adulte et à l'enfant de plus de 50 kg (à partir de 15 ans). Pour les enfants ayant un poids inférieur à 50 kg, il existe d'autres présentations de paracétamol: demandez
+                                    conseil à votre médecin ou à votre pharmacien.</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Contre-indications</h4>
+                                <p>Ne prenez jamais DOLIPRANE 1000 mg, comprimé dans les cas suivants: · allergie connue au paracétamol ou à l'un des constituants, · maladie grave du foie.</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Précautions d’emploi et mises en garde spéciales</h4>
+                                <p>PRECAUTIONS PARTICULIERES · Si la douleur persiste plus de 5 jours ou la fièvre plus de 3 jours, ou en cas d'efficacité insuffisante ou de survenue de tout autre signe, ne pas continuer le traitement sans l'avis de votre
+                                    médecin. · En cas de maladie grave du foie ou des reins, il est nécessaire de consulter votre médecin avant de prendre du paracétamol. MISES EN GARDE SPECIALES En cas de surdosage ou de prise par erreur d'une dose trop
+                                    élevée, consultez immédiatement votre médecin. Ce médicament contient du paracétamol. D'autre médicaments en contiennent. Ne les associez pas, afin de ne pas dépasser la dose quotidienne recommandée (voir Posologie).</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Interactions avec d’autres médicaments</h4>
+                                <p>Si vous prenez ou avez pris récemment un autre médicament, y compris un médicament obtenu sans ordonnance, parlez-en à votre médecin ou à votre pharmacien. Signalez que vous ou votre enfant prenez ce médicament si votre
+                                    médecin vous prescrit un dosage du taux d'acide urique dans le sang.</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Utilisation pendant la grossesse et l'allaitement</h4>
+                                <p>Le paracétamol, dans les conditions normales d'utilisation, peut être utilisé pendant la grossesse ainsi qu'en cas d'allaitement. Demandez conseil à votre médecin ou à votre pharmacien avant de prendre tout médicament.</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Posologie, Mode et/ou voie(s) d'administration, Fréquence d'administration et Durée du traitement</h4>
+                                <p>POSOLOGIE : En raison de son dosage, ce médicament est réservé à l'adulte et à l'enfant de plus de 50 kg. La posologie usuelle est de 1 comprimé à 1000 mg par prise, à renouveler au bout de 6 à 8 heures. En cas de besoin,
+                                    la prise peut être répétée au bout de 4 heures minimum. Il n'est généralement pas nécessaire de dépasser la dose de 3000 mg de paracétamol par jour, soit 3 comprimés par jour. Cependant, en cas de douleurs plus intenses,
+                                    et sur avis de votre médecin, la posologie peut être augmentée jusqu'à 4000 mg par jour, soit 4 comprimés par jour. Les doses supérieures à 3000 mg de paracétamol par jour nécessitent un avis médical. · NE JAMAIS PRENDRE
+                                    PLUS DE 4000 mg de PARACETAMOL PAR JOUR, (en tenant compte de tous les médicaments contenant du paracétamol dans leur formule) · Toujours respecter un intervalle de 4 heures au moins entre les prises. Les prises systématiques
+                                    permettent d'éviter les oscillations de douleur ou de fièvre. Elles doivent être espacées d'au moins 4 heures. En cas de maladie grave des reins (insuffisance rénale sévère), les prises seront espacées de 8 heures minimum.
+                                    Ne pas dépasser 3 comprimés par jour. Si vous avez l'impression que l'effet de ce médicament est trop fort ou trop faible, consultez votre médecin ou votre pharmacien. MODE D'ADMINISTRATION : Voie orale. Les comprimés
+                                    sont à avaler tels quels avec une boisson (par exemple eau, lait, jus de fruit).</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Symptômes et instructions en cas de surdosage</h4>
+                                <p>En cas de surdosage ou d'intoxication accidentelle, prévenir en urgence un médecin.</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Instructions en cas d'omission d'une ou de plusieurs doses</h4>
+                                <p>Ne prenez pas de dose double pour compenser la dose que vous avez oublié de prendre.</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Description des effets indésirables éventuels</h4>
+                                <p>Comme tous les médicaments, DOLIPRANE 1000 mg, comprimé est susceptible d'avoir des effets indésirables, bien que tout le monde n'y soit pas sujet. · Dans certains cas rares, il est possible que survienne une éruption ou
+                                    une rougeur cutanée ou une réaction allergique pouvant se manifester par un brusque gonflement du visage et du cou ou par un malaise brutal avec chute de la pression artérielle. Il faut immédiatement arrêter le traitement,
+                                    avertir votre médecin et ne plus jamais reprendre de médicaments contenant du paracétamol. · Exceptionnellement, des modifications biologiques nécessitant un contrôle du bilan sanguin ont pu être observées: taux anormalement
+                                    bas de certains globules blancs ou de certaines cellules du sang comme les plaquettes pouvant se traduire par des saignements de nez ou des gencives. Dans ce cas, consultez un médecin. Si vous remarquez des effets indésirables
+                                    non mentionnés dans cette notice, ou si certains effets indésirables deviennent graves, veuillez en informer votre médecin ou votre pharmacien.</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Substances actives</h4>
+                                <p>Paracétamol ....................................................... 1000,00 mg Pour un comprimé.</p>
+                            </div>
+
+                            <div class="containt-notice">
+                                <h4>Autres composants</h4>
+                                <p>Povidone, amidon prégélatinisé, carboxyméthylamidon sodique (type A), talc, stéarate de magnésium</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="foot-modal">
+                        <h2>MY PHARMACY</h2>
+                        <span>© copyright - 2022 Tout droit reserve</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
 
             <!-- footer -->
             <div class="footer">
@@ -144,6 +346,7 @@
                     <span>© copyright - 2022 Tout droit reserve</span>
                 </div>
             </div>
+
         </div>
 
     </section>
@@ -152,6 +355,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/script-modal.js"></script>
 </body>
 
 </html>

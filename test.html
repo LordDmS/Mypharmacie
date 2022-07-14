@@ -121,45 +121,156 @@
 
             </div>
 
-            <div>
+            <!-- groupe de medicament -->
+            <div class="groupe-medicament">
 
+                <div class="containt-group">
 
-                <div class="w3-container">
-                    <h2>Tabs</h2>
-                </div>
+                    <div class="head-containt-group">
+                        <h2>Groupe de Medicament</h2>
+                        <div>
+                            <a href="#">
+                                <ion-icon name="arrow-down-circle"></ion-icon>
+                            </a>
+                            <a href="#">
+                                <ion-icon name="arrow-up-circle"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="groupe-categorie">
 
-                <div class="w3-bar w3-black">
-                    <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-                    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-                    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
-                </div>
+                        <!-- groupe-->
+                        <div class="groupe">
 
-                <div>
-                    <div id="London" class="w3-container city">
-                        <h2>London</h2>
-                        <p>London is the capital city of England.</p>
+                            <div class="head-groupe">
+                                <h2>Selectionnez un groupe</h2>
+                            </div>
+                            <div class="containt-groupe">
+
+                                <div class="card-groupe">
+                                    <a href="#">
+                                        <img src="img/groupe/medicaments-innovants-a-prix-600.jpg" alt="">
+                                        <h4>Medicament</h4>
+                                        <p>13450</p>
+                                    </a>
+                                </div>
+
+                                <div class="card-groupe">
+                                    <a href="#">
+                                        <img src="img/groupe/beaute et soin.jpg" alt="">
+                                        <h4>Beaute et Soin</h4>
+                                        <p>13450</p>
+                                    </a>
+                                </div>
+
+                                <div class="card-groupe">
+                                    <a href="#">
+                                        <img src="img/groupe/bebe et maman.jpg" alt="">
+                                        <h4>Bebe et Maman</h4>
+                                        <p>13450</p>
+                                    </a>
+                                </div>
+
+                                <div class="card-groupe">
+                                    <a href="#">
+                                        <img src="img/groupe/bien etre.jpg" alt="">
+                                        <h4>Bien Etre</h4>
+                                        <p>13450</p>
+                                    </a>
+                                </div>
+
+                                <div class="card-groupe">
+                                    <a href="#">
+                                        <img src="img/groupe/materiel-medical_133.jpg" alt="">
+                                        <h4>Materiel Medical</h4>
+                                        <p>13450</p>
+                                    </a>
+                                </div>
+
+                                <div class="card-groupe">
+                                    <a href="#">
+                                        <img src="img/groupe/nutrition.jpg" alt="">
+                                        <h4>nutrition</h4>
+                                        <p>13450</p>
+                                    </a>
+                                </div>
+
+                                <div class="card-groupe">
+                                    <a href="#">
+                                        <img src="img/groupe/veterinaire.jpg" alt="">
+                                        <h4>Veterinaire</h4>
+                                        <p>13450</p>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- categorie-->
+                        <div class="cardbox-group">
+
+                            <div class="card-group">
+                                <p>Anti-fievre <span>(2)</span></p>
+                                <a href="Details-groupe-medicament.html">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="card-group">
+                                <p>Anti-douleur <span>(1234)</span></p>
+                                <a href="#">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="card-group">
+                                <p>Antalgique <span>(1234)</span></p>
+                                <a href="#">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="card-group">
+                                <p>Antibiotique <span>(1234)</span></p>
+                                <a href="#">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="card-group">
+                                <p>Anti-fievre <span>(1234)</span></p>
+                                <a href="#">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="card-group">
+                                <p>Anti-douleur <span>(1234)</span></p>
+                                <a href="#">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="card-group">
+                                <p>Antalgique <span>(1234)</span></p>
+                                <a href="#">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="card-group">
+                                <p>Antibiotique <span>(1234)</span></p>
+                                <a href="#">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div id="Paris" class="w3-container city" style="display:none">
-                        <h2>Paris</h2>
-                        <p>Paris is the capital of France.</p>
-                    </div>
-
-                    <div id="Tokyo" class="w3-container city" style="display:none">
-                        <h2>Tokyo</h2>
-                        <p>Tokyo is the capital of Japan.</p>
-                    </div>
                 </div>
-                <script>
-                    function openCity(cityName) {
-                        var i;
-                        var x = document.getElementsByClassName("city");
-                        for (i = 0; i < x.length; i++) {
-                            x[i].style.display = "none";
-                        }
-                        document.getElementById(cityName).style.display = "block";
-                    }
-                </script>
 
             </div>
 
