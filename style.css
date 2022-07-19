@@ -3438,3 +3438,182 @@
                 grid-template-columns: repeat(1, 1fr);
             }
         }
+        /* ########################################## */
+        /* Style pour la page vente*/
+        /* ########################################## */
+        
+        .vente {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .vente .head-vente {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .vente .head-vente h2 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .vente .head-vente a {
+            position: relative;
+            padding: 5px;
+            background-color: var(--bouton);
+            margin-right: 5px;
+            border-radius: 10px;
+            font-size: 15px;
+            color: var(--contenue);
+        }
+        
+        .vente .containt-vente {
+            position: relative;
+            padding: 15px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        
+        .containt-vente .stat-vente {
+            position: relative;
+            padding: 15px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+        }
+        
+        .stat-vente .col-stat-vente {
+            position: relative;
+            width: 100%;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            padding: 15px;
+            overflow: hidden;
+        }
+        
+        .stat-vente .col-stat-vente .head {
+            color: var(--bouton);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-vente .col-stat-vente .containt {
+            position: relative;
+            max-width: 350px;
+            min-width: 200px;
+        }
+        
+        .liste-vente {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+            overflow: hidden;
+        }
+        
+        .liste-vente .head-liste-vente {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .liste-vente h4 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .liste-vente .containt-liste-vente {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+            max-height: 500px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        
+        .containt-liste-vente .vente-an {
+            position: relative;
+            padding: 15px;
+            border-radius: 20px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            margin-bottom: 15px;
+            max-width: 580px;
+            min-width: 300px;
+        }
+        
+        .vente-an div {
+            overflow: hidden;
+        }
+        
+        .vente-an .head {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50px 2fr 1fr;
+            grid-gap: 5px;
+            color: var(--bouton);
+            font-size: 14px;
+            font-weight: 600;
+            border-bottom: solid 1px var(--bouton);
+            padding-bottom: 5px;
+        }
+        
+        .vente-an .containt {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50px 2fr 1fr;
+            grid-gap: 5px;
+            color: var(--texte2);
+            font-size: 12px;
+            padding-top: 10px;
+        }
+        /* design responsive */
+        
+        @media(max-width:600px) {
+            .liste-vente .containt-liste-vente {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .containt-vente .stat-vente {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media(max-width:300px) {
+            .liste-vente .containt-liste-vente {
+                max-width: 320px;
+                overflow-x: scroll;
+            }
+            .vente-an .head {
+                font-size: 12px;
+            }
+            .vente-an .containt {
+                font-size: 11px;
+            }
+            .stat-vente .col-stat-vente .containt {
+                min-width: 150px;
+            }
+        }
