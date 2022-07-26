@@ -26,9 +26,9 @@
             --texte2: #444242ad;
             --contenue: #ffffff;
             --nuance: #0fce5f49;
-            --conflit: #fa0808f6;
-            --regle: #4dfa08f6;
-            --suspendu: #f6fa08;
+            --conflit: #fa080891;
+            --regle: #4dfa08b7;
+            --suspendu: #f6fa08a9;
         }
         
         a {
@@ -370,11 +370,8 @@
         
         .details .dernierachat .cardheader .btn,
         .details .derniervente .cardheader .btn {
-            position: relative;
-            padding: 5px;
-            background-color: var(--bouton);
-            color: var(--contenue);
-            border-radius: 6px;
+            color: var(--bouton);
+            font-size: 35px;
         }
         
         .details table {
@@ -637,262 +634,31 @@
         /* Style pour la page inventaire */
         /* ########################################## */
         
-        .details-inventaire {
+        .inventaire {
             position: relative;
             width: 100%;
             padding: 20px;
         }
         
-        .header-details {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        
-        .header-details h2 {
-            color: var(--bouton);
-            font-size: 18px;
-            font-weight: 600;
-        }
-        
-        .header-details .btn {
-            padding: 5px 5px 5px 5px;
-            background-color: var(--bouton);
-            border-radius: 5px;
-            color: var(--contenue);
-            margin-left: 20px;
-        }
-        
-        .newproduit {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--contenue);
-            box-shadow: 0 7px 25px var(--nuance);
-            border-radius: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .liste-rupture-produit {
-            position: relative;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-column-gap: 10px;
-            max-height: 650px;
-            overflow-x: scroll;
-        }
-        
-        .liste-produit {
-            position: relative;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-column-gap: 10px;
-        }
-        
-        .cardproduit {
+        .inventaire .head {
             position: relative;
             width: 100%;
             padding: 15px;
-            background: var(--contenue);
-            border-radius: 15px;
-            box-shadow: 0 2px 5px var(--nuance);
-            margin-bottom: 20px;
-        }
-        
-        .imgproduit {
-            position: relative;
-            width: 150px;
-            height: 120px;
-            overflow: hidden;
-            margin: auto;
-        }
-        
-        .imgproduit img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .imgproduit ion-icon {
-            position: relative;
-            color: var(--bouton);
-            font-size: 25px;
-            visibility: hidden;
-        }
-        
-        .imgproduit img:hover {
-            opacity: 0.3;
-        }
-        
-        .imgproduit:hover ion-icon {
-            visibility: visible;
-            cursor: pointer;
-        }
-        
-        .descproduit {
-            position: relative;
-            line-height: 30px;
-            width: 100%;
-        }
-        
-        .descproduit h4 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--bouton);
-        }
-        
-        .descproduit span {
-            font-size: 14px;
-            color: var(--texte2);
-        }
-        
-        .Categorie {
-            position: relative;
-            display: grid;
-            min-height: 500px;
-            background: var(--contenue);
-            box-shadow: 0px 7px 25px var(--nuance);
-            padding: 20px;
-            border-radius: 20px;
-            max-height: 200px;
-            overflow-x: scroll;
-        }
-        
-        .fournisseur .cardheader,
-        .Categorie .cardheader {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
         }
         
-        .fournisseur .cardheader h2,
-        .Categorie .cardheader h2 {
-            font-weight: 600;
+        .inventaire .head h2 {
             color: var(--bouton);
             font-size: 15px;
-        }
-        
-        .fournisseur .cardheader .btn,
-        .Categorie .cardheader .btn {
-            position: relative;
-            padding: 5px;
-            background-color: var(--bouton);
-            color: var(--contenue);
-            border-radius: 6px;
-        }
-        
-        .Categorie table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        
-        .Categorie table tbody td {
-            font-size: 13px;
-        }
-        
-        .Categorie table thead td {
             font-weight: 600;
         }
         
-        .Categorie table tr {
-            color: var(--texte2);
-            border-bottom: 1px solid var(--fond);
-        }
-        
-        .Categorie table tr:last-child {
-            border-bottom: none;
-        }
-        
-        .Categorie table td:last-child {
-            text-align: end;
-        }
-        
-        .Categorie table tbody tr:hover {
+        .inventaire .head a {
+            padding: 5px 15px;
             background-color: var(--bouton);
+            font-size: 14px;
             color: var(--contenue);
-        }
-        
-        .Categorie tr td {
-            padding: 10px;
-        }
-        
-        .fournisseur {
-            position: relative;
-            min-height: 500px;
-            display: grid;
-            padding: 20px;
-            box-shadow: 0 7px 25px var(--nuance);
-            border-radius: 20px;
-            max-height: 200px;
-            overflow-x: scroll;
-        }
-        
-        .fournisseur .imgbx {
-            position: relative;
-            overflow: hidden;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-        
-        .fournisseur .imgbx img {
-            position: absolute;
-            object-fit: cover;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .fournisseur table tr:hover {
-            background: var(--bouton);
-            color: var(--contenue);
-        }
-        
-        .fournisseur table tr td {
-            padding: 12px 10px;
-        }
-        
-        .fournisseur table tr td h4 {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 25px;
-        }
-        
-        .fournisseur table tr:hover td h4 span {
-            color: var(--contenue);
-        }
-        
-        .fournisseur table tr td h4 span {
-            font-size: 13px;
-            color: var(--texte2);
-        }
-        /* design responsive*/
-        
-        @media (max-width: 1280px) {
-            .liste-produit {
-                grid-template-columns: repeat(3, 1fr);
-                grid-column-gap: 10px;
-            }
-        }
-        
-        @media (max-width: 700px) {
-            .liste-produit {
-                grid-template-columns: repeat(2, 1fr);
-                grid-column-gap: 10px;
-            }
-        }
-        
-        @media (max-width: 400px) {
-            .liste-produit {
-                overflow-y: scroll;
-            }
         }
         /* ########################################## */
         /* Style pour la page details produit */
@@ -3487,9 +3253,6 @@
         .containt-vente .stat-vente {
             position: relative;
             padding: 15px;
-            background-color: var(--contenue);
-            box-shadow: 0 7px 12px var(--nuance);
-            border-radius: 20px;
             margin-bottom: 20px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -3523,9 +3286,6 @@
             position: relative;
             width: 100%;
             padding: 15px;
-            background-color: var(--contenue);
-            border-radius: 20px;
-            box-shadow: 0 7px 12px var(--nuance);
             overflow: hidden;
         }
         
@@ -3534,12 +3294,22 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            margin-bottom: 20px;
         }
         
-        .liste-vente h4 {
+        .liste-vente .head-liste-vente h4 {
             color: var(--bouton);
             font-size: 18px;
             font-weight: 600;
+        }
+        
+        .liste-vente .head-liste-vente a {
+            position: relative;
+            padding: 5px;
+            border-radius: 5px 10px;
+            margin: auto;
+            color: var(--bouton);
+            font-size: 35px;
         }
         
         .liste-vente .containt-liste-vente {
@@ -3616,4 +3386,462 @@
             .stat-vente .col-stat-vente .containt {
                 min-width: 150px;
             }
+        }
+        /* ########################################## */
+        /* Style pour la page achat*/
+        /* ########################################## */
+        
+        .achat {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            overflow: hidden;
+        }
+        
+        .achat .head {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .achat .head h4 {
+            color: var(--bouton);
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .achat .head a {
+            padding: 5px;
+            background-color: var(--bouton);
+            color: var(--contenue);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .achat .containt {
+            position: relative;
+            width: 100%;
+            overflow: scroll;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 10px;
+            max-height: 500px;
+        }
+        
+        .achat .containt .achat-an a {
+            display: flex;
+        }
+        
+        .achat .containt .achat-an {
+            position: relative;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        .achat .containt .achat-an:hover {
+            background-color: var(--bouton);
+        }
+        
+        .containt .achat-an .img-achat-an {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .containt .achat-an .img-achat-an img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+        }
+        
+        .containt .achat-an .achat-an-desc {
+            position: relative;
+            width: max-content;
+            line-height: 25px;
+        }
+        
+        .containt .achat-an .achat-an-desc h4 {
+            color: var(--bouton);
+            font-size: 14px;
+        }
+        
+        .containt .achat-an:hover .achat-an-desc span,
+        .containt .achat-an:hover .achat-an-desc h4 {
+            color: var(--contenue);
+        }
+        
+        .containt .achat-an .achat-an-desc span {
+            color: var(--texte2);
+            font-size: 13px;
+        }
+        
+        .trier {
+            position: relative;
+            width: 100%;
+        }
+        
+        .trier .head-trier {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .trier .imprimer {
+            position: relative;
+            margin-top: 10px;
+            padding: 15px;
+        }
+        
+        .trier .head-trier span {
+            color: var(--bouton);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .trier .head-trier input {
+            position: relative;
+            width: 150px;
+            height: 30px;
+            border-radius: 15px;
+            border: solid 1px var(--bouton);
+            padding: 10px;
+            color: var(--texte2);
+            font-size: 15px;
+            font-weight: 600;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        .trier .imprimer a,
+        .trier .head-trier a {
+            padding: 5px 15px;
+            background-color: var(--bouton);
+            color: var(--contenue);
+            font-size: 13px;
+            font-weight: 100;
+            border-radius: 10px;
+        }
+        
+        .trier .containt-trier {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            max-height: 250px;
+            margin-top: 20px;
+        }
+        
+        .containt-trier .trier-achat {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            overflow: hidden;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .trier-achat .head {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--bouton);
+        }
+        
+        .trier-achat .head h4 {
+            color: var(--bouton);
+            font-size: 13px;
+        }
+        
+        .trier-achat .head h4 span {
+            color: var(--texte2);
+            font-size: 12px;
+            font-weight: 100;
+        }
+        
+        .trier-achat .containt {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            line-height: 20px;
+        }
+        
+        .trier-achat .containt .img-achat {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: auto;
+        }
+        
+        .trier-achat .containt .img-achat img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        
+        .trier-achat .containt h2 {
+            color: var(--bouton);
+            font-size: 13px;
+            text-align: center;
+        }
+        
+        .trier-achat .containt p {
+            color: var(--texte);
+            font-size: 13px;
+        }
+        
+        .trier-achat .containt h4 {
+            color: var(--bouton);
+            font-size: 12px;
+        }
+        
+        .trier-achat .containt h4 span {
+            color: var(--texte2);
+            font-size: 12px;
+        }
+        /* design responsive */
+        
+        @media(max-width:1150px) {
+            .achat .containt {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:650px) {
+            .achat .containt {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media(max-width:360px) {
+            .achat .containt {
+                max-width: 300px;
+                overflow-x: scroll;
+            }
+            .achat {
+                max-width: 340px;
+            }
+            .achat .containt .achat-an {
+                width: 270px;
+            }
+        }
+        /* ########################################## */
+        /* Style pour la page detail achat*/
+        /* ########################################## */
+        
+        .detail-achat {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            overflow: hidden;
+        }
+        
+        .detail-achat .head-d-achat {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .detail-achat .head-d-achat h2 {
+            color: var(--bouton);
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .detail-achat .head-d-achat a {
+            padding: 5px;
+            background-color: var(--bouton);
+            align-items: center;
+            color: var(--contenue);
+            border-radius: 10px;
+        }
+        
+        .detail-achat .containt-d-achat {
+            position: relative;
+            padding: 15px;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .containt-d-achat .client {
+            display: flex;
+            position: relative;
+            padding: 15px;
+            background-color: var(--contenue);
+            overflow: hidden;
+        }
+        
+        .containt-d-achat .client .client-img {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .containt-d-achat .client .client-img img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        
+        .containt-d-achat .client .desc-client {
+            position: relative;
+            width: 100%;
+            background-color: var(--bouton);
+            box-shadow: 0 7px 12px var(--nuance);
+            overflow: hidden;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            padding: 20px;
+        }
+        
+        .client .desc-client .containt {
+            position: relative;
+            line-height: 25px;
+            background-color: var(--contenue);
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+        
+        .client .desc-client .containt p {
+            color: var(--texte2);
+            font-size: 14px;
+        }
+        
+        .client .desc-client .containt h5 {
+            color: var(--bouton);
+            font-size: 13px;
+        }
+        
+        .d-achat {
+            position: relative;
+            margin-top: 20px;
+            width: 100%;
+            padding: 15px;
+            overflow: hidden;
+            background-color: var(--contenue);
+            box-shadow: 0 7px 12px var(--nuance);
+            border-radius: 20px;
+        }
+        
+        .d-achat .head {
+            position: relative;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .d-achat .head h4 {
+            color: var(--bouton);
+            font-size: 14px;
+        }
+        
+        .d-achat .head span {
+            color: var(--texte2);
+            font-size: 13px;
+        }
+        
+        .d-achat .containt table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .d-achat table tbody td {
+            font-size: 13px;
+        }
+        
+        .d-achat table thead td {
+            font-weight: 600;
+        }
+        
+        .d-achat table tbody tr {
+            color: var(--texte2);
+            border-bottom: 1px solid var(--fond);
+        }
+        
+        .details table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .details table td:last-child {
+            text-align: end;
+        }
+        
+        .details table tbody tr:hover {
+            background-color: var(--bouton);
+            color: var(--contenue);
+        }
+        
+        .details tr td {
+            padding-bottom: 10px;
+        }
+        
+        .d-achat table tbody tr td .img {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .d-achat table tbody tr td .img img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        
+        .d-achat .foot-d-achat {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .d-achat .foot-d-achat h4 {
+            color: var(--bouton);
+            font-size: 14px;
+        }
+        
+        .d-achat .foot-d-achat span {
+            color: var(--texte2);
+            font-size: 13px;
         }

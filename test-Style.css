@@ -1,132 +1,259 @@
-        .details-produit {
-            position: relative;
-            width: 100%;
-            padding: 20px;
-        }
-        
-        .details-produit-header {
-            position: relative;
-            padding: 15px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .details-produit-header h2 {
-            font-weight: 600;
-            font-size: 20px;
-            color: var(--bouton);
-        }
-        
-        .details-produit-header .btn {
-            position: relative;
-            padding: 5px;
-            border-radius: 5px;
-            color: var(--contenue);
-            margin-right: 10px;
-            background-color: var(--conflit);
-        }
-        
-        .details-produit-header .btn-edit {
-            padding: 5px;
-            border-radius: 5px;
-            color: var(--texte);
-            background-color: var(--suspendu);
-        }
-        
-        .details-produit-containt {
-            position: relative;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            grid-gap: 10px;
-            background-color: var(--contenue);
-            border-radius: 20px;
-            box-shadow: 0 7px 5px var(--nuance);
-        }
-        
-        .details-produit-containt .img {
-            position: relative;
-            width: 350px;
-            height: 280px;
-            overflow: hidden;
-        }
-        
-        .details-produit-containt .img img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .details-produit-containt .desc-header h4 {
-            margin-top: 20px;
-            line-height: 40px;
-            color: var(--bouton);
-            font-size: 16px;
-            font-weight: 600;
-        }
-        
-        .details-produit-containt .desc-containt {
-            position: relative;
-            line-height: 25px;
-            overflow-y: scroll;
-            min-height: 350px;
-            min-width: 400px;
-        }
-        
-        .details-produit-containt .desc-containt p {
-            color: var(--texte);
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-        
-        .details-produit-containt .desc-containt p span {
-            color: var(--bouton);
-            font-size: 16px;
-            font-weight: 600;
-        }
-        
-        .details-produit-containt .desc-containt .btn {
-            position: relative;
-            padding: 5px;
-            background-color: var(--bouton);
-            color: var(--contenue);
-            margin: 10px;
-            border-radius: 10px;
-        }
-        /* design responsive */
-        
-        @media (max-width: 760px) {
-            .details-produit-containt {
-                grid-template-columns: 250px 1fr;
-            }
-            .details-produit-containt .img {
-                width: 250px;
-                height: 250px;
-            }
-            .details-produit-containt .desc-containt {
-                min-width: 300px;
-            }
-        }
-        
-        @media (max-width: 654px) {
-            .details-produit-containt {
-                grid-template-columns: repeat(1, 1fr);
-                min-width: 300px;
-            }
-            .details-produit-containt .desc-containt {
-                min-width: 300px;
-            }
-        }
-        
-        @media (max-width: 326px) {
-            .details-produit-containt .desc-containt {
-                min-width: 300px;
-            }
-            .details-produit-header {
-                min-width: 300px;
-            }
-        }
+.details-inventaire {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.header-details {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-details h2 {
+    color: var(--bouton);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-details .btn {
+    padding: 5px 5px 5px 5px;
+    background-color: var(--bouton);
+    border-radius: 5px;
+    color: var(--contenue);
+    margin-left: 20px;
+}
+
+.newproduit {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--contenue);
+    box-shadow: 0 7px 25px var(--nuance);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.liste-rupture-produit {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    max-height: 650px;
+    overflow-x: scroll;
+}
+
+.liste-produit {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+}
+
+.cardproduit {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: var(--contenue);
+    border-radius: 15px;
+    box-shadow: 0 2px 5px var(--nuance);
+    margin-bottom: 20px;
+}
+
+.imgproduit {
+    position: relative;
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.imgproduit img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgproduit ion-icon {
+    position: relative;
+    color: var(--bouton);
+    font-size: 25px;
+    visibility: hidden;
+}
+
+.imgproduit img:hover {
+    opacity: 0.3;
+}
+
+.imgproduit:hover ion-icon {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.descproduit {
+    position: relative;
+    line-height: 30px;
+    width: 100%;
+}
+
+.descproduit h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bouton);
+}
+
+.descproduit span {
+    font-size: 14px;
+    color: var(--texte2);
+}
+
+.Categorie {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--contenue);
+    box-shadow: 0px 7px 25px var(--nuance);
+    padding: 20px;
+    border-radius: 20px;
+    max-height: 200px;
+    overflow-x: scroll;
+}
+
+.fournisseur .cardheader,
+.Categorie .cardheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.fournisseur .cardheader h2,
+.Categorie .cardheader h2 {
+    font-weight: 600;
+    color: var(--bouton);
+    font-size: 15px;
+}
+
+.fournisseur .cardheader .btn,
+.Categorie .cardheader .btn {
+    position: relative;
+    padding: 5px;
+    background-color: var(--bouton);
+    color: var(--contenue);
+    border-radius: 6px;
+}
+
+.Categorie table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.Categorie table tbody td {
+    font-size: 13px;
+}
+
+.Categorie table thead td {
+    font-weight: 600;
+}
+
+.Categorie table tr {
+    color: var(--texte2);
+    border-bottom: 1px solid var(--fond);
+}
+
+.Categorie table tr:last-child {
+    border-bottom: none;
+}
+
+.Categorie table td:last-child {
+    text-align: end;
+}
+
+.Categorie table tbody tr:hover {
+    background-color: var(--bouton);
+    color: var(--contenue);
+}
+
+.Categorie tr td {
+    padding: 10px;
+}
+
+.fournisseur {
+    position: relative;
+    min-height: 500px;
+    display: grid;
+    padding: 20px;
+    box-shadow: 0 7px 25px var(--nuance);
+    border-radius: 20px;
+    max-height: 200px;
+    overflow-x: scroll;
+}
+
+.fournisseur .imgbx {
+    position: relative;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.fournisseur .imgbx img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fournisseur table tr:hover {
+    background: var(--bouton);
+    color: var(--contenue);
+}
+
+.fournisseur table tr td {
+    padding: 12px 10px;
+}
+
+.fournisseur table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.fournisseur table tr:hover td h4 span {
+    color: var(--contenue);
+}
+
+.fournisseur table tr td h4 span {
+    font-size: 13px;
+    color: var(--texte2);
+}
+
+
+/* design responsive*/
+
+@media (max-width: 1280px) {
+    .liste-produit {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .liste-produit {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .liste-produit {
+        overflow-y: scroll;
+    }
+}
