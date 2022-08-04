@@ -20,7 +20,7 @@
         
          :root {
             --bouton: #1B7541;
-            --fond: #33303027;
+            --fond: #47414127;
             --border: #33303002;
             --texte: #000000;
             --texte2: #444242ad;
@@ -257,6 +257,7 @@
             position: relative;
             width: 100%;
             padding: 20px;
+            margin-bottom: -25px;
         }
         
         .chemin .containt-chemin {
@@ -267,6 +268,7 @@
             background: var(--contenue);
             border-radius: 20px;
             box-shadow: 0 3px 5px var(--nuance);
+            border: 1px solid var(--nuance);
             min-width: 290px;
             overflow: hidden;
         }
@@ -301,6 +303,7 @@
             background: var(--contenue);
             padding: 15px;
             border-radius: 20px;
+            border: 1px solid var(--nuance);
             box-shadow: 0 7px 5px var(--nuance);
             display: flex;
             justify-content: space-between;
@@ -349,7 +352,8 @@
             display: grid;
             min-height: 500px;
             background: var(--contenue);
-            box-shadow: 0px 7px 25px var(--nuance);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
             padding: 20px;
             border-radius: 20px;
         }
@@ -442,15 +446,17 @@
             display: grid;
             min-height: 500px;
             padding: 20px;
-            box-shadow: 0 7px 25px var(--nuance);
+            background: var(--contenue);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
             border-radius: 20px;
         }
         
         .dernierachat .imgbx {
             position: relative;
             overflow: hidden;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
         }
         
@@ -500,7 +506,9 @@
             position: relative;
             padding: 20px;
             border-radius: 20px;
-            box-shadow: 0 7px 25px var(--nuance);
+            background: var(--contenue);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
         }
         
         .footer-containt h2 {
@@ -640,25 +648,219 @@
             padding: 20px;
         }
         
-        .inventaire .head {
+        .inventaire .offres {
             position: relative;
             width: 100%;
             padding: 15px;
-            display: flex;
-            justify-content: space-between;
         }
         
-        .inventaire .head h2 {
+        .inventaire .offres .head {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        
+        .inventaire .offres .head h2 {
             color: var(--bouton);
             font-size: 15px;
             font-weight: 600;
         }
         
-        .inventaire .head a {
-            padding: 5px 15px;
-            background-color: var(--bouton);
+        .inventaire .offres .head a {
+            font-size: 30px;
+            color: var(--bouton);
+            align-items: center;
+            border-radius: 7px;
+        }
+        
+        .inventaire .containt {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+        
+        .inventaire .containt .groupe-produit {
+            position: relative;
+            background: var(--contenue);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
+            border-radius: 10px;
+            padding: 5px 10px 0px 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .groupe-produit .groupe-name h4 {
+            color: var(--texte2);
             font-size: 14px;
-            color: var(--contenue);
+        }
+        
+        .groupe-produit .groupe-list a {
+            color: var(--bouton);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        /* nos produits*/
+        
+        .liste-produit {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-column-gap: 10px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 800px;
+        }
+        
+        .cardproduit {
+            position: relative;
+            max-width: 170px;
+            padding: 15px;
+            border-radius: 15px;
+            background: var(--contenue);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .imgproduit {
+            position: relative;
+            width: 140px;
+            height: 100px;
+            overflow: hidden;
+            margin: auto;
+        }
+        
+        .imgproduit img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .imgproduit ion-icon {
+            position: relative;
+            color: var(--bouton);
+            font-size: 25px;
+            visibility: hidden;
+        }
+        
+        .imgproduit img:hover {
+            opacity: 0.15;
+        }
+        
+        .imgproduit:hover ion-icon {
+            visibility: visible;
+            cursor: pointer;
+        }
+        
+        .descproduit {
+            position: relative;
+            line-height: 30px;
+            width: 100%;
+            padding-top: 10px;
+        }
+        
+        .descproduit h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--bouton);
+        }
+        
+        .descproduit span {
+            font-size: 14px;
+            color: var(--texte2);
+        }
+        /* Modal liste categorie */
+        
+        .list-categorie {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+        
+        .list-categorie .categorie {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--contenue);
+            border-radius: 10px;
+            background: var(--contenue);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
+            padding: 5px 10px 0 10px;
+        }
+        
+        .list-categorie .categorie h4 {
+            color: var(--texte2);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .list-categorie .categorie a {
+            color: var(--bouton);
+            font-size: 20px;
+            font-weight: 300;
+        }
+        /* design responsive */
+        
+        @media(max-width:1300px) {
+            .liste-produit {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+        
+        @media(max-width:950px) {
+            .liste-produit {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media(max-width:800px) {
+            .inventaire .containt {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media(max-width:700px) {
+            .inventaire .containt {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .liste-produit {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media(max-width:550px) {
+            .inventaire .containt {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .liste-produit {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:400px) {
+            .liste-produit {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .inventaire .offres .head h2 {
+                font-size: 13px;
+            }
+            .cardproduit {
+                margin: auto;
+                margin-bottom: 20px;
+            }
         }
         /* ########################################## */
         /* Style pour la page details produit */
@@ -680,36 +882,40 @@
         
         .details-produit-header h2 {
             font-weight: 600;
-            font-size: 20px;
+            font-size: 18px;
             color: var(--bouton);
         }
         
         .details-produit-header .btn {
             position: relative;
-            padding: 5px;
-            border-radius: 5px;
-            color: var(--contenue);
-            margin-right: 10px;
-            background-color: var(--conflit);
+            color: var(--conflit);
+            font-size: 25px;
         }
         
         .details-produit-header .btn-edit {
-            padding: 5px;
-            border-radius: 5px;
-            color: var(--texte);
-            background-color: var(--suspendu);
+            font-size: 25px;
+            color: var(--bouton);
         }
         
         .details-produit-containt {
             position: relative;
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr 250px;
+            grid-template-columns: 1fr 200px;
             grid-gap: 10px;
             background-color: var(--contenue);
             border-radius: 20px;
             box-shadow: 0 7px 5px var(--nuance);
             padding: 15px;
+            overflow-x: hidden;
+        }
+        
+        .details-produit-containt .right-col {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
         }
         
         .details-produit-containt .col-image p {
@@ -748,6 +954,7 @@
             padding: 20px;
             line-height: 20px;
             background-color: var(--nuance);
+            overflow-x: hidden;
         }
         
         .details-produit-containt .row-img p {
@@ -832,7 +1039,7 @@
         .desc-produit .row-interdit p {
             color: var(--bouton);
             margin-right: 10px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
         }
         
@@ -887,9 +1094,6 @@
         
         .produit-simulaire {
             position: relative;
-            background-color: var(--contenue);
-            border-radius: 20px;
-            box-shadow: 0 7px 12px var(--nuance);
             width: 100%;
             padding: 10px;
         }
@@ -910,22 +1114,25 @@
             max-height: 500px;
             overflow-y: scroll;
             overflow-x: hidden;
+            margin: auto;
+            padding: 10px;
         }
         
         .containt-prod-sim .card-prod-sim {
             position: relative;
-            width: 100%;
+            max-width: 170px;
             padding: 10px;
             margin-bottom: 10px;
             background-color: var(--contenue);
             border-radius: 20px;
-            box-shadow: 0 7px 12px var(--nuance);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
         }
         
         .card-prod-sim .img-card-prod-sim {
             position: relative;
-            width: 150px;
-            height: 120px;
+            width: 120px;
+            height: 90px;
             overflow: hidden;
             margin: auto;
         }
@@ -987,38 +1194,75 @@
             font-size: 12px;
             line-height: 20px;
         }
-        /* ########################################## */
-        /* Style pour la page produit */
-        /* ########################################## */
+        /* Design Responsive */
         
-        .liste-produit-total {
-            position: relative;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-column-gap: 10px;
-            max-height: 350px;
-            overflow-x: scroll;
-        }
-        /* design responsive*/
-        
-        @media (max-width: 1280px) {
-            .liste-produit-total {
-                grid-template-columns: repeat(3, 1fr);
-                grid-column-gap: 10px;
+        @media(max-width:1150px) {
+            .details-produit-containt {
+                grid-template-columns: 1fr;
             }
-        }
-        
-        @media (max-width: 700px) {
-            .liste-produit-total {
-                grid-template-columns: repeat(2, 1fr);
-                grid-column-gap: 10px;
+            .produit-simulaire {
+                border-top: 1px solid var(--bouton);
             }
-        }
-        
-        @media (max-width: 400px) {
-            .liste-produit-total {
+            .produit-simulaire .containt-prod-sim {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+                max-height: 300px;
                 overflow-y: scroll;
+                overflow-x: hidden;
+            }
+        }
+        
+        @media(max-width:820px) {
+            .produit-simulaire .containt-prod-sim {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .details-produit-containt .img-produit {
+                width: 250px;
+                height: 200px;
+            }
+        }
+        
+        @media(max-width:600px) {
+            .produit-simulaire .containt-prod-sim {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .details-produit-containt .img-produit {
+                width: 200px;
+                height: 150px;
+            }
+        }
+        
+        @media(max-width:450px) {
+            .details-produit-containt .right-col {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .produit-simulaire .containt-prod-sim {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .containt-prod-sim .card-prod-sim {
+                margin: auto;
+            }
+            .details-produit-containt .img-produit {
+                width: 300px;
+                height: 250px;
+            }
+            .details-produit-header h2 {
+                font-size: 15px;
+            }
+        }
+        
+        @media(max-width:390px) {
+            .details-produit-containt .img-produit {
+                width: 220px;
+                height: 170px;
+            }
+            .details-produit-header .btn {
+                font-size: 15px;
+            }
+            .details-produit-header .btn-edit {
+                font-size: 15px;
             }
         }
         /* ########################################## */
@@ -1059,7 +1303,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 20px;
-            height: 900px;
+            height: 1200px;
             overflow-x: scroll;
         }
         
@@ -1069,14 +1313,15 @@
             height: 380px;
             background-color: var(--contenue);
             border-radius: 20px;
-            box-shadow: 0 10px 12px var(--nuance);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
         }
         
         .card-employe .card-emp-header {
             position: relative;
             height: 250px;
             overflow: hidden;
-            background-color: var(--bouton);
+            background-color: var(--nuance);
             padding: 20px;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
@@ -1104,7 +1349,7 @@
             text-align: center;
             font-size: 18px;
             font-weight: 200;
-            color: var(--contenue);
+            color: var(--texte);
         }
         
         .card-employe .info-emp {
@@ -1121,7 +1366,8 @@
             position: relative;
             min-height: 50px;
             background-color: var(--contenue);
-            box-shadow: 0 7px 12px var(--nuance);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
             text-align: center;
             padding: 10px;
             border-radius: 10px;
@@ -1197,14 +1443,15 @@
             height: 500px;
             background-color: var(--contenue);
             border-radius: 20px;
-            box-shadow: 0 10px 12px var(--nuance);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
         }
         
         .card-profil-employe .card-emp-header {
             position: relative;
             height: 250px;
             overflow: hidden;
-            background-color: var(--bouton);
+            background-color: var(--nuance);
             padding: 20px;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
@@ -1232,7 +1479,7 @@
             text-align: center;
             font-size: 18px;
             font-weight: 200;
-            color: var(--contenue);
+            color: var(--texte);
         }
         
         .card-profil-employe .info-emp {
@@ -1249,7 +1496,8 @@
             position: relative;
             min-height: 50px;
             background-color: var(--contenue);
-            box-shadow: 0 7px 12px var(--nuance);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
             text-align: center;
             padding: 10px;
             border-radius: 10px;
@@ -1275,7 +1523,6 @@
             padding: 20px;
             border-radius: 20px;
             background-color: var(--contenue);
-            box-shadow: 0 7px 12px var(--nuance);
         }
         
         .head-activite-emp {
@@ -1565,14 +1812,15 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 10px;
-            max-height: 300px;
-            overflow-x: scroll;
+            max-height: 1000px;
+            overflow-y: scroll;
         }
         
         .card-partenaire {
             position: relative;
             background-color: var(--contenue);
-            box-shadow: 0 5px 12px var(--nuance);
+            box-shadow: 0px 7px 12px var(--nuance);
+            border: 1px solid var(--nuance);
             border-radius: 20px;
             min-height: 100px;
             padding: 10px;
@@ -1687,7 +1935,6 @@
             width: 100%;
             padding: 50px;
             background-color: var(--contenue);
-            box-shadow: 0 7px 12px var(--nuance);
             border-radius: 20px;
         }
         
@@ -1707,7 +1954,7 @@
             position: relative;
             width: 100%;
             display: grid;
-            grid-template-columns: 400px 2fr;
+            grid-template-columns: 1fr 2fr;
             grid-gap: 10px
         }
         
@@ -1715,9 +1962,6 @@
             position: relative;
             width: 100%;
             overflow: hidden;
-            padding: 15px;
-            border-radius: 20px;
-            box-shadow: 0 7px 12px var(--nuance);
         }
         
         .cardheader {
@@ -1733,13 +1977,13 @@
             width: 100%;
         }
         
-        .lst-act-part-containt .achat-employe .cardheader {
+        .lst-act-part-containt .cardheader {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            padding-left: 15px;
         }
         
-        .lst-act-part-containt .achat-employe .cardheader h2 {
+        .lst-act-part-containt .cardheader h2 {
             font-weight: 600;
             color: var(--bouton);
             font-size: 15px;
@@ -1749,7 +1993,6 @@
             position: relative;
             width: 100%;
             padding: 20px;
-            box-shadow: 0 7px 12px var(--nuance);
             border-radius: 20px;
             height: 575px;
         }
@@ -1769,6 +2012,7 @@
         .liste-client-part .part-containt {
             position: relative;
             width: 100%;
+            padding: 10px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 10px;
@@ -1781,7 +2025,8 @@
             background-color: var(--contenue);
             box-shadow: 0 5px 12px var(--nuance);
             border-radius: 20px;
-            min-height: 110px;
+            min-height: 100px;
+            max-width: 350px;
             padding: 10px;
             overflow: hidden;
         }
