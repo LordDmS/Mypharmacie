@@ -1,262 +1,431 @@
-.details-inventaire {
-    position: relative;
-    width: 100%;
-    padding: 20px;
+  :root {
+     --bouton: #1B7541;
+     --fond: #47414127;
+     --border: #33303002;
+     --texte: #000000;
+     --texte2: #444242ad;
+     --contenue: #ffffff;
+     --nuance: #0fce5f49;
+     --conflit: #fa080891;
+     --regle: #4dfa08b7;
+     --suspendu: #f6fa08a9;
+ }
+ 
+ body {
+     padding: 30px;
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .article {
+     position: relative;
+     width: 250px;
+     height: 350px;
+     background: var(--contenue);
+     border-radius: 15px;
+     overflow: hidden;
+     border: 1px solid var(--nuance);
+     box-shadow: 0 2px 5px var(--nuance);
+ }
+ 
+ .article::before {
+     content: "";
+     position: absolute;
+     top: 70%;
+     width: 100%;
+     height: 100%;
+     background: var(--nuance);
+     transform: skewY(345deg);
+     transition: 1.5s;
+ }
+ 
+ .article:hover::before {
+     top: -70%;
+     transform: skewY(390deg);
+ }
+ 
+ .article::after {
+     content: " © copyright -  My Pharmacie";
+     position: absolute;
+     bottom: 0;
+     left: 15px;
+     font-weight: 100;
+     font-size: 12px;
+     color: var(--texte2);
+ }
+ 
+ .article .imgBox {
+     position: relative;
+     width: 220px;
+     height: 180px;
+     overflow: hidden;
+     display: flex;
+     margin: auto;
+     top: 20px;
+     margin-bottom: 15px;
+     z-index: 1;
+ }
+ 
+ .article .imgBox img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ /*
+.article .imgBox img {
+    max-width: 100%;
+    
+    transition: .5s;
 }
 
-.header-details {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.article:hover .imgBox img {
+    max-width: 50%;
+      
 }
-
-.header-details h2 {
-    color: var(--bouton);
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.header-details .btn {
-    padding: 5px 5px 5px 5px;
-    background-color: var(--bouton);
-    border-radius: 5px;
-    color: var(--contenue);
-    margin-left: 20px;
-}
-
-.newproduit {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--contenue);
-    box-shadow: 0 7px 25px var(--nuance);
-    border-radius: 20px;
-    margin-bottom: 30px;
-}
-
-.liste-rupture-produit {
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 10px;
-    max-height: 650px;
-    overflow-x: scroll;
-}
-
-.liste-produit {
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 10px;
-}
-
-.cardproduit {
-    position: relative;
-    width: 100%;
-    padding: 15px;
-    background: var(--contenue);
-    border-radius: 15px;
-    box-shadow: 0 2px 5px var(--nuance);
-    margin-bottom: 20px;
-}
-
-.imgproduit {
-    position: relative;
-    width: 150px;
-    height: 120px;
-    overflow: hidden;
-    margin: auto;
-}
-
-.imgproduit img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.imgproduit ion-icon {
-    position: relative;
-    color: var(--bouton);
-    font-size: 25px;
-    visibility: hidden;
-}
-
-.imgproduit img:hover {
-    opacity: 0.3;
-}
-
-.imgproduit:hover ion-icon {
-    visibility: visible;
-    cursor: pointer;
-}
-
-.descproduit {
-    position: relative;
-    line-height: 30px;
-    width: 100%;
-}
-
-.descproduit h4 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--bouton);
-}
-
-.descproduit span {
-    font-size: 14px;
-    color: var(--texte2);
-}
-
-.Categorie {
-    position: relative;
-    display: grid;
-    min-height: 500px;
-    background: var(--contenue);
-    box-shadow: 0px 7px 25px var(--nuance);
-    padding: 20px;
-    border-radius: 20px;
-    max-height: 200px;
-    overflow-x: scroll;
-}
-
-.fournisseur .cardheader,
-.Categorie .cardheader {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.fournisseur .cardheader h2,
-.Categorie .cardheader h2 {
-    font-weight: 600;
-    color: var(--bouton);
-    font-size: 15px;
-}
-
-.fournisseur .cardheader .btn,
-.Categorie .cardheader .btn {
-    position: relative;
-    padding: 5px;
-    background-color: var(--bouton);
-    color: var(--contenue);
-    border-radius: 6px;
-}
-
-.Categorie table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.Categorie table tbody td {
-    font-size: 13px;
-}
-
-.Categorie table thead td {
-    font-weight: 600;
-}
-
-.Categorie table tr {
-    color: var(--texte2);
-    border-bottom: 1px solid var(--fond);
-}
-
-.Categorie table tr:last-child {
-    border-bottom: none;
-}
-
-.Categorie table td:last-child {
-    text-align: end;
-}
-
-.Categorie table tbody tr:hover {
-    background-color: var(--bouton);
-    color: var(--contenue);
-}
-
-.Categorie tr td {
-    padding: 10px;
-}
-
-.fournisseur {
-    position: relative;
-    min-height: 500px;
-    display: grid;
-    padding: 20px;
-    box-shadow: 0 7px 25px var(--nuance);
-    border-radius: 20px;
-    max-height: 200px;
-    overflow-x: scroll;
-}
-
-.fournisseur .imgbx {
-    position: relative;
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.fournisseur .imgbx img {
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.fournisseur table tr:hover {
-    background: var(--bouton);
-    color: var(--contenue);
-}
-
-.fournisseur table tr td {
-    padding: 12px 10px;
-}
-
-.fournisseur table tr td h4 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 25px;
-}
-
-.fournisseur table tr:hover td h4 span {
-    color: var(--contenue);
-}
-
-.fournisseur table tr td h4 span {
-    font-size: 13px;
-    color: var(--texte2);
-}
-
-
-/* design responsive*/
-
-@media (max-width: 1280px) {
+*/
+ 
+ .article .contentBox {
+     position: relative;
+     padding: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     z-index: 2;
+ }
+ 
+ .article .contentBox h3 {
+     font-size: 14px;
+     color: var(--texte);
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+ 
+ .article .contentBox .price {
+     font-size: 18px;
+     color: var(--bouton);
+     font-weight: 700;
+     letter-spacing: 1px;
+ }
+ 
+ .article .contentBox .buy {
+     position: relative;
+     top: 50px;
+     opacity: 0;
+     padding: 10px 30px;
+     margin-top: 15px;
+     color: var(--contenue);
+     text-decoration: none;
+     background: var(--bouton);
+     border-radius: 30px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     transition: 1s;
+     cursor: pointer;
+ }
+ 
+ .article:hover .contentBox .buy {
+     top: 0;
+     opacity: 1;
+ }
+ /*groupe*/
+ 
+ .group {
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-gap: 20px;
+     top: 15px;
+     padding: 10px;
+     overflow-y: scroll;
+ }
+ 
+ .group .cardgroup {
+     position: relative;
+     width: 250px;
+     height: 60px;
+     padding: 5px;
+     display: flex;
+     overflow: hidden;
+     border: #000000 solid 1px;
+ }
+ 
+ .cardgroup .cardgroup-img {
+     position: relative;
+     width: 50px;
+     height: 50px;
+     overflow: hidden;
+     border-radius: 50%;
+ }
+ 
+ .cardgroup .cardgroup-img img {
+     position: absolute;
+     width: 100%;
+     left: 0;
+     height: 100%;
+     top: 0;
+     object-fit: cover;
+ }
+ /* Inventaire */
+ 
+ .inventaire {
+     position: relative;
+     width: 100%;
+     padding: 20px;
+ }
+ 
+ .inventaire .offres {
+     position: relative;
+     width: 100%;
+     padding: 15px;
+ }
+ 
+ .inventaire .offres .head {
+     position: relative;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     overflow: hidden;
+     margin-top: 20px;
+ }
+ 
+ .inventaire .offres .head h2 {
+     color: var(--bouton);
+     font-size: 15px;
+     font-weight: 600;
+ }
+ 
+ .inventaire .offres .head a {
+     font-size: 30px;
+     color: var(--bouton);
+     align-items: center;
+     border-radius: 7px;
+ }
+ 
+ .inventaire .containt {
+     position: relative;
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-gap: 10px;
+ }
+ 
+ .inventaire .containt .groupe-produit {
+     position: relative;
+     background: var(--contenue);
+     box-shadow: 0px 7px 12px var(--nuance);
+     border: 1px solid var(--nuance);
+     border-radius: 10px;
+     padding: 5px 10px 0px 10px;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .groupe-produit .groupe-name h4 {
+     color: var(--texte2);
+     font-size: 14px;
+ }
+ 
+ .groupe-produit .groupe-list a {
+     color: var(--bouton);
+     font-size: 20px;
+     cursor: pointer;
+ }
+ /* nos produits*/
+ 
+ .liste-produit {
+     position: relative;
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     grid-column-gap: 10px;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     max-height: 800px;
+ }
+ 
+ .article {
+     position: relative;
+     width: 180px;
+     height: 250px;
+     background: var(--contenue);
+     border-radius: 15px;
+     overflow: hidden;
+     border: 1px solid var(--nuance);
+     box-shadow: 0 2px 5px var(--nuance);
+     margin-bottom: 15px;
+ }
+ 
+ .article::before {
+     content: "";
+     position: absolute;
+     top: 70%;
+     width: 100%;
+     height: 100%;
+     background: var(--nuance);
+     transform: skewY(345deg);
+     transition: 1.5s;
+ }
+ 
+ .article:hover::before {
+     top: -70%;
+     transform: skewY(390deg);
+ }
+ 
+ .article::after {
+     content: " © copyright -  My Pharmacie";
+     position: absolute;
+     left: 15px;
+     bottom: 3px;
+     font-weight: 100;
+     font-size: 10px;
+     color: var(--texte2);
+ }
+ 
+ .article .imgBox {
+     position: relative;
+     width: 140px;
+     height: 100px;
+     overflow: hidden;
+     display: flex;
+     margin: auto;
+     top: 20px;
+     margin-bottom: 15px;
+     z-index: 1;
+ }
+ 
+ .article .imgBox img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ 
+ .article .contentBox {
+     position: relative;
+     padding: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     z-index: 2;
+ }
+ 
+ .article .contentBox h3 {
+     font-size: 12px;
+     color: var(--texte);
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     margin-bottom: 5px;
+ }
+ 
+ .article .contentBox .price {
+     font-size: 14px;
+     color: var(--bouton);
+     font-weight: 700;
+     letter-spacing: 1px;
+ }
+ 
+ .article .contentBox .buy {
+     position: relative;
+     top: 50px;
+     opacity: 0;
+     padding: 10px 15px;
+     margin-top: 15px;
+     color: var(--contenue);
+     text-decoration: none;
+     background: var(--bouton);
+     border-radius: 30px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     transition: 1s;
+     cursor: pointer;
+ }
+ 
+ .article:hover .contentBox .buy {
+     top: 0;
+     opacity: 1;
+ }
+ /* Modal liste categorie */
+ 
+ .list-categorie {
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 10px;
+ }
+ 
+ .list-categorie .categorie {
+     position: relative;
+     display: flex;
+     justify-content: space-between;
+     background-color: var(--contenue);
+     border-radius: 10px;
+     background: var(--contenue);
+     box-shadow: 0px 7px 12px var(--nuance);
+     border: 1px solid var(--nuance);
+     padding: 5px 10px 0 10px;
+ }
+ 
+ .list-categorie .categorie h4 {
+     color: var(--texte2);
+     font-size: 14px;
+     font-weight: 500;
+ }
+ 
+ .list-categorie .categorie a {
+     color: var(--bouton);
+     font-size: 20px;
+     font-weight: 300;
+ }
+ /* design responsive */
+ 
+ @media(max-width:1230px) {
+     .liste-produit {
+         grid-template-columns: repeat(4, 1fr);
+     }
+ }
+ 
+ @media(max-width:950px) {
+     .inventaire .offres .containt {
+         grid-template-columns: repeat(3, 1fr);
+     }
+ }
+ /*
+@media(max-width:700px) {
+    .inventaire .containt {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .liste-produit {
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 10px;
     }
 }
 
-@media (max-width: 700px) {
+@media(max-width:550px) {
+    .inventaire .containt {
+        grid-template-columns: repeat(1, 1fr);
+    }
     .liste-produit {
         grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 10px;
     }
 }
 
-@media (max-width: 400px) {
+@media(max-width:400px) {
     .liste-produit {
-        overflow-y: scroll;
+        grid-template-columns: repeat(1, 1fr);
     }
-}
-
-
-/*inventaire*/
+    .inventaire .offres .head h2 {
+        font-size: 13px;
+    }
+    .cardproduit {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}*/

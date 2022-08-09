@@ -711,34 +711,64 @@
             position: relative;
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             grid-column-gap: 10px;
             overflow-y: scroll;
             overflow-x: hidden;
             max-height: 800px;
         }
         
-        .cardproduit {
+        .article {
             position: relative;
-            max-width: 170px;
-            padding: 15px;
-            border-radius: 15px;
+            width: 180px;
+            height: 250px;
             background: var(--contenue);
-            box-shadow: 0px 7px 12px var(--nuance);
-            border: 1px solid var(--nuance);
-            margin-bottom: 20px;
+            border-radius: 15px;
             overflow: hidden;
+            border: 1px solid var(--nuance);
+            box-shadow: 0 2px 5px var(--nuance);
+            margin-bottom: 15px;
         }
         
-        .imgproduit {
+        .article::before {
+            content: "";
+            position: absolute;
+            top: 70%;
+            width: 100%;
+            height: 100%;
+            background: var(--nuance);
+            transform: skewY(345deg);
+            transition: 1.5s;
+        }
+        
+        .article:hover::before {
+            top: -70%;
+            transform: skewY(390deg);
+        }
+        
+        .article::after {
+            content: " © copyright -  My Pharmacie";
+            position: absolute;
+            left: 15px;
+            bottom: 3px;
+            font-weight: 100;
+            font-size: 10px;
+            color: var(--texte2);
+        }
+        
+        .article .imgBox {
             position: relative;
             width: 140px;
             height: 100px;
             overflow: hidden;
+            display: flex;
             margin: auto;
+            top: 20px;
+            margin-bottom: 15px;
+            z-index: 1;
         }
         
-        .imgproduit img {
+        .article .imgBox img {
             position: absolute;
             top: 0;
             left: 0;
@@ -747,38 +777,51 @@
             object-fit: cover;
         }
         
-        .imgproduit ion-icon {
+        .article .contentBox {
             position: relative;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 2;
+        }
+        
+        .article .contentBox h3 {
+            font-size: 12px;
+            color: var(--texte);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .article .contentBox .price {
+            font-size: 14px;
             color: var(--bouton);
-            font-size: 25px;
-            visibility: hidden;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         
-        .imgproduit img:hover {
-            opacity: 0.15;
-        }
-        
-        .imgproduit:hover ion-icon {
-            visibility: visible;
+        .article .contentBox .buy {
+            position: relative;
+            top: 50px;
+            opacity: 0;
+            padding: 10px 15px;
+            margin-top: 15px;
+            color: var(--contenue);
+            text-decoration: none;
+            background: var(--bouton);
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 1s;
             cursor: pointer;
         }
         
-        .descproduit {
-            position: relative;
-            line-height: 30px;
-            width: 100%;
-            padding-top: 10px;
-        }
-        
-        .descproduit h4 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--bouton);
-        }
-        
-        .descproduit span {
-            font-size: 14px;
-            color: var(--texte2);
+        .article:hover .contentBox .buy {
+            top: 0;
+            opacity: 1;
         }
         /* Modal liste categorie */
         
@@ -814,26 +857,20 @@
         }
         /* design responsive */
         
-        @media(max-width:1300px) {
-            .liste-produit {
-                grid-template-columns: repeat(5, 1fr);
-            }
-        }
-        
-        @media(max-width:950px) {
+        @media(max-width:1230px) {
             .liste-produit {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
         
-        @media(max-width:800px) {
-            .inventaire .containt {
+        @media(max-width:950px) {
+            .inventaire .offres .containt {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
         
-        @media(max-width:700px) {
-            .inventaire .containt {
+        @media(max-width:850px) {
+            .inventaire .offres .containt {
                 grid-template-columns: repeat(2, 1fr);
             }
             .liste-produit {
@@ -841,25 +878,25 @@
             }
         }
         
-        @media(max-width:550px) {
-            .inventaire .containt {
-                grid-template-columns: repeat(1, 1fr);
-            }
+        @media(max-width:650px) {
             .liste-produit {
                 grid-template-columns: repeat(2, 1fr);
             }
-        }
-        
-        @media(max-width:400px) {
-            .liste-produit {
-                grid-template-columns: repeat(1, 1fr);
-            }
-            .inventaire .offres .head h2 {
-                font-size: 13px;
-            }
-            .cardproduit {
+            .liste-produit .article {
                 margin: auto;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media(max-width:500px) {
+            .inventaire .offres .containt {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media(max-width:450px) {
+            .liste-produit {
+                grid-template-columns: repeat(1, 1fr);
             }
         }
         /* ########################################## */
@@ -1954,45 +1991,14 @@
             position: relative;
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr;
             grid-gap: 10px
-        }
-        
-        .lst-act-part {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        .cardheader {
-            position: relative;
-            display: flex;
-            color: var(--bouton);
-            font-size: 14px;
-            font-weight: 600;
-        }
-        
-        .lst-act-part-containt {
-            position: relative;
-            width: 100%;
-        }
-        
-        .lst-act-part-containt .cardheader {
-            display: flex;
-            justify-content: space-between;
-            padding-left: 15px;
-        }
-        
-        .lst-act-part-containt .cardheader h2 {
-            font-weight: 600;
-            color: var(--bouton);
-            font-size: 15px;
         }
         
         .liste-client-part {
             position: relative;
             width: 100%;
-            padding: 20px;
+            padding: 5px;
             border-radius: 20px;
             height: 575px;
         }
@@ -2007,6 +2013,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+            padding: 15px;
         }
         
         .liste-client-part .part-containt {
@@ -2014,7 +2021,7 @@
             width: 100%;
             padding: 10px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 10px;
             max-height: 470px;
             overflow-y: scroll;
@@ -2098,7 +2105,7 @@
         
         @media (max-width: 1200px) {
             .liste-client-part .part-containt {
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
             .diag-act-part .chartbox-part {
                 max-width: 300px;
@@ -2127,11 +2134,15 @@
             .diag-act-part .chartbox-part {
                 max-width: 250px;
             }
+            .liste-client-part .part-containt {
+                grid-template-columns: repeat(1, 1fr);
+                margin: auto;
+            }
         }
         
         @media (max-width: 393px) {
             .diag-act-part .chartbox-part {
-                max-width: 200px;
+                max-width: 250px;
             }
         }
         /* ########################################## */
@@ -2453,159 +2464,30 @@
         
         @media(max-width) {}
         /* ########################################## */
-        /* Style pour la page groupe medicament */
+        /* Style pour la page groupe produit */
         /* ########################################## */
-        
-        .groupe-categorie {
-            position: relative;
-            width: 100%;
-            padding: 20px;
-        }
         
         .groupe {
             position: relative;
             width: 100%;
             overflow: hidden;
-            padding: 15px;
-            background-color: var(--contenue);
-            box-shadow: 0 7px 12px var(--nuance);
-            border-radius: 20px;
+            padding: 20px;
         }
         
-        .head-groupe {
-            position: relative;
-            width: 100%;
-            display: flex;
-            margin-bottom: 20px;
-        }
-        
-        .head-groupe h2 {
-            color: var(--bouton);
-            font-size: 18px;
-            font-weight: 600;
-        }
-        
-        .containt-groupe {
-            position: relative;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 10px;
-        }
-        
-        .containt-groupe .card-groupe {
-            position: relative;
-            max-width: 300px;
-            height: 270px;
-            overflow: hidden;
-            border-radius: 20px;
-            background-color: var(--bouton);
-            margin-bottom: 10px;
-        }
-        
-        .containt-groupe .card-groupe img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-        }
-        
-        .containt-groupe .card-groupe a {
-            cursor: pointer;
-        }
-        
-        .containt-groupe .card-groupe:hover h4,
-        .containt-groupe .card-groupe:hover p {
-            visibility: visible;
-        }
-        
-        .containt-groupe .card-groupe:hover img {
-            opacity: 0.1;
-        }
-        
-        .containt-groupe .card-groupe h4 {
-            color: var(--contenue);
-            font-size: 18px;
-            font-weight: 500;
-            margin-left: 20px;
-            margin-top: 50px;
-            visibility: hidden;
-        }
-        
-        .containt-groupe .card-groupe p {
-            color: var(--contenue);
+        .bouton {
             font-size: 25px;
-            font-weight: 700;
-            margin-left: 20px;
-            margin-top: 10px;
-            visibility: hidden;
-        }
-        /* ol design */
-        
-        .cardbox-group {
-            position: relative;
-            width: 100%;
-            padding: 15px;
-            background-color: var(--contenue);
-            border-radius: 20px;
-            box-shadow: 0 7px 12px var(--nuance);
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
-            max-height: 360px;
-            overflow-y: scroll;
         }
         
-        .cardbox-group .card-group {
-            position: relative;
-            margin-bottom: 5px;
-            background-color: var(--contenue);
-            border-radius: 10px;
-            box-shadow: 0 7px 12px var(--nuance);
-            display: flex;
-            padding: 10px;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .cardbox-group .card-group p {
-            color: var(--texte);
-            font-size: 14px;
-            font-weight: 600;
-        }
-        
-        .cardbox-group .card-group p span {
-            color: var(--texte2);
-            font-size: 12px;
-        }
-        
-        .cardbox-group .card-group a {
+        .bouton.add {
             color: var(--bouton);
-            font-size: 20px;
-        }
-        /* design reponsive*/
-        
-        @media(max-width:850px) {
-            .containt-group .cardbox-group {
-                grid-template-columns: repeat(3, 1fr);
-            }
         }
         
-        @media(max-width:670px) {
-            .containt-group .cardbox-group {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .bouton.fil {
+            color: var(--texte);
         }
         
-        @media(max-width:450px) {
-            .containt-group .cardbox-group {
-                grid-template-columns: repeat(1, 1fr);
-            }
-            .containt-group .head-containt-group h2 {
-                font-size: 12px;
-            }
+        .bouton.del {
+            color: var(--conflit);
         }
         /* ########################################## */
         /* Style pour la page groupe approvisionement */

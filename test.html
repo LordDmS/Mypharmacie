@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewp ort" content="width=device-width, initial-scale=1.0">
     <title>MY PHARMACIE</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -104,567 +104,367 @@
             </div>
 
             <!-- inventaire -->
-            <div class="details-inventaire">
+            <div class="inventaire">
 
-                <!-- nouveau produit -->
-                <div class="newproduit">
-                    <div class="header-details">
-                        <h2>Les Nouveaux Produits</h2>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+
+                        <div class="head-modal">
+                            <span class="close">&times;</span>
+                            <p>Categorie du groupe : Medicament</p>
+                        </div>
+
+                        <div class="body-modal">
+
+                            <div class="list-categorie">
+
+                                <div class="categorie">
+                                    <h4>Douleur et Fievre</h4>
+                                    <a href="#">
+                                        <ion-icon name="list-circle"></ion-icon>
+                                    </a>
+                                </div>
+
+                                <div class="categorie">
+                                    <h4>Maux de ventre</h4>
+                                    <a href="#">
+                                        <ion-icon name="list-circle"></ion-icon>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="foot-modal">
+                            <h2>MY PHARMACY</h2>
+                            <span>© copyright - 2022 Tout droit reserve</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Nos Offres -->
+                <div class="offres">
+                    <div class="containt">
+
+                        <div class="groupe-produit">
+                            <div class="groupe-name">
+                                <a href="#">
+                                    <h4>Medicament</h4>
+                                </a>
+                            </div>
+                            <div class="groupe-list">
+                                <a id="myBtn">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="groupe-produit">
+                            <div class="groupe-name">
+                                <a href="#">
+                                    <h4>Veterinaire</h4>
+                                </a>
+                            </div>
+                            <div class="groupe-list">
+                                <a href="1">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="groupe-produit">
+                            <div class="groupe-name">
+                                <a href="#">
+                                    <h4>Beaute et Soin</h4>
+                                </a>
+                            </div>
+                            <div class="groupe-list">
+                                <a href="1">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="groupe-produit">
+                            <div class="groupe-name">
+                                <a href="#">
+                                    <h4>Bebe et Maman</h4>
+                                </a>
+                            </div>
+                            <div class="groupe-list">
+                                <a href="1">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="groupe-produit">
+                            <div class="groupe-name">
+                                <a href="#">
+                                    <h4>Bien Etre</h4>
+                                </a>
+                            </div>
+                            <div class="groupe-list">
+                                <a href="1">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="groupe-produit">
+                            <div class="groupe-name">
+                                <a href="#">
+                                    <h4>Materiel Medical</h4>
+                                </a>
+                            </div>
+                            <div class="groupe-list">
+                                <a href="1">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="groupe-produit">
+                            <div class="groupe-name">
+                                <a href="#">
+                                    <h4>Nutrition</h4>
+                                </a>
+                            </div>
+                            <div class="groupe-list">
+                                <a href="1">
+                                    <ion-icon name="list-circle"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="head">
+                        <h2>Nos Offres du Moment ( Tout Categorie )</h2>
                         <div>
-                            <a href="#" class="btn">
+                            <a href="#">
                                 <ion-icon name="add-circle"></ion-icon>
                             </a>
-                            <a href="#" class="btn">
-                                <ion-icon name="eye"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="liste-produit">
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/doliprane.jpeg" alt="">
-                                <a href="Details-produit.html">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/Ethambutol.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/isoni.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/isoniazide.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/Pyrazinamide.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mon Stock -->
-                <div class="newproduit">
-                    <div class="header-details">
-                        <h2>Listes des Produits</h2>
-                        <a href="liste-produit.html" class="btn">
-                            <ion-icon name="eye"></ion-icon>
-                        </a>
-                    </div>
-                    <div class="liste-produit">
+                <!-- Nos Produits -->
+                <div class="liste-produit">
 
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/doliprane.jpeg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/doliprane.jpeg">
                         </div>
 
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/isoni.jpg">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/isoniazide.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/rifa.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/Pyrazinamide.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/Ethambutol.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/composition-avec-le-paquet-deux-de-bayer-aspirine-poznan-pôle-janvier-marque-d-médicament-populaire-premier-et-plus-connu-170083106.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/csm_EUS_Personal_Care_Pharma_03_e37cb70c55.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/bio-oil-huile-soin.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/product_8324855hd.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="eye"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 000 GNF</h4>
-                            </div>
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
                         </div>
 
                     </div>
-                </div>
 
-                <!-- Rupture de stock -->
-                <div class="newproduit">
-                    <div class="header-details">
-                        <h2>Rupture de stock</h2>
-                    </div>
-                    <div class="liste-rupture-produit">
+                    <div class="article">
 
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/doliprane.jpeg" alt="">
-                                <a href="approvisionement.html">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 Boite</h4>
-                            </div>
+                        <div class="imgBox">
+                            <img src="img/produit/insuline.jpg">
                         </div>
 
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/isoni.jpg">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>20 Boite</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/isoniazide.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 Boite</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/rifa.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>5 Boite</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/Pyrazinamide.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 Boite</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/Ethambutol.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 Boite</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/composition-avec-le-paquet-deux-de-bayer-aspirine-poznan-pôle-janvier-marque-d-médicament-populaire-premier-et-plus-connu-170083106.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 Boite</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/csm_EUS_Personal_Care_Pharma_03_e37cb70c55.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 Boite</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/bio-oil-huile-soin.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 Boite</h4>
-                            </div>
-                        </div>
-
-                        <div class="cardproduit">
-                            <div class="imgproduit">
-                                <img src="img/product_8324855hd.jpg" alt="">
-                                <a href="#">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </a>
-                            </div>
-                            <div class="descproduit">
-                                <span>Doliprane</span>
-                                <h4>25 Boite</h4>
-                            </div>
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
                         </div>
 
                     </div>
-                </div>
 
-                <!-- Categorie de produit et fournisseur -->
-                <div class="details">
+                    <div class="article">
 
-                    <!-- Groupe de medicament -->
-                    <div class="Categorie">
-                        <div class="cardheader">
-                            <h2>Groupe</h2>
-                            <a href="#" class="btn">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
+                        <div class="imgBox">
+                            <img src="img/produit/materiel_medical/scholl_Semelles.jpeg">
                         </div>
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>No Groupe</td>
-                                    <td>Groupe de Medicament</td>
-                                    <td>Medicament </td>
-                                    <td>action</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Anti fievre</td>
-                                    <td>23</td>
-                                    <td><span class="status delivered"><a href="index.html">Details</a></td></span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
 
                     </div>
 
-                    <!-- Fournisseur -->
-                    <div class="fournisseur">
-                        <div class="cardheader">
-                            <h2>Fournisseurs</h2>
-                            <a href="#" class="btn">
-                                <ion-icon name="add-circle"></ion-icon>
-                            </a>
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/produit/materiel_medical/masque_chirurgicaux.jpeg">
                         </div>
-                        <table>
 
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgbx"><img src="img/fournisseur/govlogo.png" alt=""> </div>
-                                </td>
-                                <td>
-                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                                </td>
-                            </tr>
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
 
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgbx"><img src="img/fournisseur/images (1).jfif" alt=""> </div>
-                                </td>
-                                <td>
-                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                                </td>
-                            </tr>
+                    </div>
 
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgbx"><img src="img/fournisseur/images (2).jfif" alt=""> </div>
-                                </td>
-                                <td>
-                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                                </td>
-                            </tr>
+                    <div class="article">
 
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgbx"><img src="img/fournisseur/images (4).jfif" alt=""> </div>
-                                </td>
-                                <td>
-                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                                </td>
-                            </tr>
+                        <div class="imgBox">
+                            <img src="img/isoni.jpg">
+                        </div>
 
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgbx"><img src="img/fournisseur/Logo-PHA-600x600-e1542146973645.png" alt=""> </div>
-                                </td>
-                                <td>
-                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                                </td>
-                            </tr>
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
 
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgbx"><img src="img/fournisseur/parks-and-horticulture-authority-pha-lahore-logo-0AA1453ED1-seeklogo.com.png" alt=""> </div>
-                                </td>
-                                <td>
-                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                                </td>
-                            </tr>
+                    </div>
 
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgbx"><img src="img/fournisseur/ph-logo-letter-speed-meter-racing-style-initial-monogram-design-black-background-speedometer-238211214.jpg" alt=""> </div>
-                                </td>
-                                <td>
-                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                                </td>
-                            </tr>
+                    <div class="article">
 
-                            <tr>
-                                <td width="60px">
-                                    <div class="imgbx"><img src="img/cd8d0c92f70616c3893c6cbe3ca3180d.jpg" alt=""> </div>
-                                </td>
-                                <td>
-                                    <h4>Pharma Guinee <br><span>Dixxin Terrasse</span></h4>
-                                </td>
-                            </tr>
+                        <div class="imgBox">
+                            <img src="img/isoniazide.jpg">
+                        </div>
 
-                        </table>
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/rifa.jpg">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/Pyrazinamide.jpg">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/Ethambutol.jpg">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/composition-avec-le-paquet-deux-de-bayer-aspirine-poznan-pôle-janvier-marque-d-médicament-populaire-premier-et-plus-connu-170083106.jpg">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/csm_EUS_Personal_Care_Pharma_03_e37cb70c55.jpg">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/bio-oil-huile-soin.jpg">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/product_8324855hd.jpg">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/produit/3400936381865-paracetamol-biogaran-1g-8-comprimes.webp">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
+                    </div>
+
+                    <div class="article">
+
+                        <div class="imgBox">
+                            <img src="img/produit/7501125112706.jpeg">
+                        </div>
+
+                        <div class="contentBox">
+                            <h3>Mouse M65</h3>
+                            <h2 class="price">61 000<small> Gnf</small></h2>
+                            <a href="#" class="buy">Plus d'Info</a>
+                        </div>
+
                     </div>
 
                 </div>
@@ -686,6 +486,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/script-modal.js"></script>
 </body>
 
 </html>
