@@ -1,431 +1,110 @@
-  :root {
-     --bouton: #1B7541;
-     --fond: #47414127;
-     --border: #33303002;
-     --texte: #000000;
-     --texte2: #444242ad;
-     --contenue: #ffffff;
-     --nuance: #0fce5f49;
-     --conflit: #fa080891;
-     --regle: #4dfa08b7;
-     --suspendu: #f6fa08a9;
- }
- 
- body {
-     padding: 30px;
-     width: 100%;
-     height: 100%;
- }
- 
- .article {
-     position: relative;
-     width: 250px;
-     height: 350px;
-     background: var(--contenue);
-     border-radius: 15px;
-     overflow: hidden;
-     border: 1px solid var(--nuance);
-     box-shadow: 0 2px 5px var(--nuance);
- }
- 
- .article::before {
-     content: "";
-     position: absolute;
-     top: 70%;
-     width: 100%;
-     height: 100%;
-     background: var(--nuance);
-     transform: skewY(345deg);
-     transition: 1.5s;
- }
- 
- .article:hover::before {
-     top: -70%;
-     transform: skewY(390deg);
- }
- 
- .article::after {
-     content: " © copyright -  My Pharmacie";
-     position: absolute;
-     bottom: 0;
-     left: 15px;
-     font-weight: 100;
-     font-size: 12px;
-     color: var(--texte2);
- }
- 
- .article .imgBox {
-     position: relative;
-     width: 220px;
-     height: 180px;
-     overflow: hidden;
-     display: flex;
-     margin: auto;
-     top: 20px;
-     margin-bottom: 15px;
-     z-index: 1;
- }
- 
- .article .imgBox img {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
- }
- /*
-.article .imgBox img {
-    max-width: 100%;
-    
-    transition: .5s;
+/*TODO: clean it all up, finish flex, add aesthetics, icons, redefine to be relative to vh-vw, maybe rework v2 variant using scss and frames and real transitions? */
+
+:root {
+    --bouton: #1B7541;
+    --fond: #47414127;
+    --border: #33303002;
+    --texte: #000000;
+    --texte2: #444242ad;
+    --contenue: #ffffff;
+    --nuance: #0fce5f49;
+    --conflit: #fa080891;
+    --regle: #4dfa08b7;
+    --suspendu: #f6fa08a9;
 }
 
-.article:hover .imgBox img {
-    max-width: 50%;
-      
-}
-*/
- 
- .article .contentBox {
-     position: relative;
-     padding: 10px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-     z-index: 2;
- }
- 
- .article .contentBox h3 {
-     font-size: 14px;
-     color: var(--texte);
-     font-weight: 600;
-     text-transform: uppercase;
-     letter-spacing: 1px;
- }
- 
- .article .contentBox .price {
-     font-size: 18px;
-     color: var(--bouton);
-     font-weight: 700;
-     letter-spacing: 1px;
- }
- 
- .article .contentBox .buy {
-     position: relative;
-     top: 50px;
-     opacity: 0;
-     padding: 10px 30px;
-     margin-top: 15px;
-     color: var(--contenue);
-     text-decoration: none;
-     background: var(--bouton);
-     border-radius: 30px;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     transition: 1s;
-     cursor: pointer;
- }
- 
- .article:hover .contentBox .buy {
-     top: 0;
-     opacity: 1;
- }
- /*groupe*/
- 
- .group {
-     position: relative;
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     grid-gap: 20px;
-     top: 15px;
-     padding: 10px;
-     overflow-y: scroll;
- }
- 
- .group .cardgroup {
-     position: relative;
-     width: 250px;
-     height: 60px;
-     padding: 5px;
-     display: flex;
-     overflow: hidden;
-     border: #000000 solid 1px;
- }
- 
- .cardgroup .cardgroup-img {
-     position: relative;
-     width: 50px;
-     height: 50px;
-     overflow: hidden;
-     border-radius: 50%;
- }
- 
- .cardgroup .cardgroup-img img {
-     position: absolute;
-     width: 100%;
-     left: 0;
-     height: 100%;
-     top: 0;
-     object-fit: cover;
- }
- /* Inventaire */
- 
- .inventaire {
-     position: relative;
-     width: 100%;
-     padding: 20px;
- }
- 
- .inventaire .offres {
-     position: relative;
-     width: 100%;
-     padding: 15px;
- }
- 
- .inventaire .offres .head {
-     position: relative;
-     width: 100%;
-     display: flex;
-     justify-content: space-between;
-     overflow: hidden;
-     margin-top: 20px;
- }
- 
- .inventaire .offres .head h2 {
-     color: var(--bouton);
-     font-size: 15px;
-     font-weight: 600;
- }
- 
- .inventaire .offres .head a {
-     font-size: 30px;
-     color: var(--bouton);
-     align-items: center;
-     border-radius: 7px;
- }
- 
- .inventaire .containt {
-     position: relative;
-     width: 100%;
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     grid-gap: 10px;
- }
- 
- .inventaire .containt .groupe-produit {
-     position: relative;
-     background: var(--contenue);
-     box-shadow: 0px 7px 12px var(--nuance);
-     border: 1px solid var(--nuance);
-     border-radius: 10px;
-     padding: 5px 10px 0px 10px;
-     display: flex;
-     justify-content: space-between;
- }
- 
- .groupe-produit .groupe-name h4 {
-     color: var(--texte2);
-     font-size: 14px;
- }
- 
- .groupe-produit .groupe-list a {
-     color: var(--bouton);
-     font-size: 20px;
-     cursor: pointer;
- }
- /* nos produits*/
- 
- .liste-produit {
-     position: relative;
-     width: 100%;
-     display: grid;
-     grid-template-columns: repeat(5, 1fr);
-     grid-column-gap: 10px;
-     overflow-y: scroll;
-     overflow-x: hidden;
-     max-height: 800px;
- }
- 
- .article {
-     position: relative;
-     width: 180px;
-     height: 250px;
-     background: var(--contenue);
-     border-radius: 15px;
-     overflow: hidden;
-     border: 1px solid var(--nuance);
-     box-shadow: 0 2px 5px var(--nuance);
-     margin-bottom: 15px;
- }
- 
- .article::before {
-     content: "";
-     position: absolute;
-     top: 70%;
-     width: 100%;
-     height: 100%;
-     background: var(--nuance);
-     transform: skewY(345deg);
-     transition: 1.5s;
- }
- 
- .article:hover::before {
-     top: -70%;
-     transform: skewY(390deg);
- }
- 
- .article::after {
-     content: " © copyright -  My Pharmacie";
-     position: absolute;
-     left: 15px;
-     bottom: 3px;
-     font-weight: 100;
-     font-size: 10px;
-     color: var(--texte2);
- }
- 
- .article .imgBox {
-     position: relative;
-     width: 140px;
-     height: 100px;
-     overflow: hidden;
-     display: flex;
-     margin: auto;
-     top: 20px;
-     margin-bottom: 15px;
-     z-index: 1;
- }
- 
- .article .imgBox img {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
- }
- 
- .article .contentBox {
-     position: relative;
-     padding: 10px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-     z-index: 2;
- }
- 
- .article .contentBox h3 {
-     font-size: 12px;
-     color: var(--texte);
-     font-weight: 600;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     margin-bottom: 5px;
- }
- 
- .article .contentBox .price {
-     font-size: 14px;
-     color: var(--bouton);
-     font-weight: 700;
-     letter-spacing: 1px;
- }
- 
- .article .contentBox .buy {
-     position: relative;
-     top: 50px;
-     opacity: 0;
-     padding: 10px 15px;
-     margin-top: 15px;
-     color: var(--contenue);
-     text-decoration: none;
-     background: var(--bouton);
-     border-radius: 30px;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     transition: 1s;
-     cursor: pointer;
- }
- 
- .article:hover .contentBox .buy {
-     top: 0;
-     opacity: 1;
- }
- /* Modal liste categorie */
- 
- .list-categorie {
-     position: relative;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-gap: 10px;
- }
- 
- .list-categorie .categorie {
-     position: relative;
-     display: flex;
-     justify-content: space-between;
-     background-color: var(--contenue);
-     border-radius: 10px;
-     background: var(--contenue);
-     box-shadow: 0px 7px 12px var(--nuance);
-     border: 1px solid var(--nuance);
-     padding: 5px 10px 0 10px;
- }
- 
- .list-categorie .categorie h4 {
-     color: var(--texte2);
-     font-size: 14px;
-     font-weight: 500;
- }
- 
- .list-categorie .categorie a {
-     color: var(--bouton);
-     font-size: 20px;
-     font-weight: 300;
- }
- /* design responsive */
- 
- @media(max-width:1230px) {
-     .liste-produit {
-         grid-template-columns: repeat(4, 1fr);
-     }
- }
- 
- @media(max-width:950px) {
-     .inventaire .offres .containt {
-         grid-template-columns: repeat(3, 1fr);
-     }
- }
- /*
-@media(max-width:700px) {
-    .inventaire .containt {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .liste-produit {
-        grid-template-columns: repeat(3, 1fr);
-    }
+body {
+    background-color: var(--contenue);
 }
 
-@media(max-width:550px) {
-    .inventaire .containt {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .liste-produit {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.groupe {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 30px;
 }
 
-@media(max-width:400px) {
-    .liste-produit {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .inventaire .offres .head h2 {
-        font-size: 13px;
-    }
-    .cardproduit {
-        margin: auto;
-        margin-bottom: 20px;
-    }
-}*/
+.groupe .groupeCard {
+    position: relative;
+    max-width: 250px;
+    height: 160px;
+    background-color: var(--contenue);
+    margin: 40px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--nuance);
+    box-shadow: 0 5px 20px var(--bouton);
+    transition: 0.5s ease-in-out;
+    border-radius: 15px;
+}
+
+.groupe .groupeCard:hover {
+    height: 220px;
+}
+
+.groupe .groupeCard .image {
+    position: relative;
+    width: 230px;
+    height: 200px;
+    top: -40%;
+    margin: auto;
+    box-shadow: 0 5px 20px var(--nuance);
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.groupe .groupeCard .image .img {
+    position: relative;
+    width: 230px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.groupe .groupeCard .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.groupe .groupeCard .content {
+    position: relative;
+    top: -140px;
+    padding: 10px 15px;
+    color: var(--texte);
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.groupe .groupeCard .content h3 {
+    color: var(--bouton);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.groupe .groupeCard .content p {
+    color: var(--texte2);
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.groupe .groupeCard .content a {
+    padding: 10px 20px;
+    background-color: var(--bouton);
+    border-radius: 10px;
+    color: var(--contenue);
+    cursor: pointer;
+}
+
+.groupe .groupeCard:hover .content {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+}

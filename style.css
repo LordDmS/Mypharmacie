@@ -56,6 +56,22 @@
             max-width: 1500px;
             margin: auto;
         }
+        
+        .bouton {
+            font-size: 25px;
+        }
+        
+        .bouton.add {
+            color: var(--bouton);
+        }
+        
+        .bouton.fil {
+            color: var(--texte);
+        }
+        
+        .bouton.del {
+            color: var(--conflit);
+        }
         /* menu dorsal*/
         
         .navigation {
@@ -728,6 +744,7 @@
             border: 1px solid var(--nuance);
             box-shadow: 0 2px 5px var(--nuance);
             margin-bottom: 15px;
+            margin: auto;
         }
         
         .article::before {
@@ -736,7 +753,7 @@
             top: 70%;
             width: 100%;
             height: 100%;
-            background: var(--nuance);
+            background: linear-gradient(121deg, var(--bouton) 13%, var(--nuance) 100%);
             transform: skewY(345deg);
             transition: 1.5s;
         }
@@ -747,13 +764,8 @@
         }
         
         .article::after {
-            content: " © copyright -  My Pharmacie";
+            content: "";
             position: absolute;
-            left: 15px;
-            bottom: 3px;
-            font-weight: 100;
-            font-size: 10px;
-            color: var(--texte2);
         }
         
         .article .imgBox {
@@ -2467,27 +2479,265 @@
         /* Style pour la page groupe produit */
         /* ########################################## */
         
-        .groupe {
+        .lstgroupe {
             position: relative;
             width: 100%;
             overflow: hidden;
             padding: 20px;
         }
         
-        .bouton {
-            font-size: 25px;
+        .lstgroupe .head {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
         }
         
-        .bouton.add {
+        .lstgroupe .head h2 {
             color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        /*groupe design*/
+        
+        .groupe {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 5px
         }
         
-        .bouton.fil {
+        .groupe .groupeCard {
+            position: relative;
+            width: 200px;
+            height: 120px;
+            background-color: var(--contenue);
+            margin: auto;
+            margin-bottom: 55px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--nuance);
+            box-shadow: 0 5px 10px var(--bouton);
+            transition: 0.5s ease-in-out;
+            border-radius: 15px;
+        }
+        
+        .groupe .groupeCard:hover {
+            height: 200px;
+        }
+        
+        .groupe .groupeCard .image {
+            position: relative;
+            width: 160px;
+            height: 120px;
+            top: -40%;
+            margin: auto;
+            box-shadow: 0 5px 20px var(--nuance);
+            border-radius: 15px;
+            z-index: 1;
+        }
+        
+        .groupe .groupeCard .image .img {
+            position: relative;
+            width: 160px;
+            height: 120px;
+            overflow: hidden;
+        }
+        
+        .groupe .groupeCard .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        
+        .groupe .groupeCard .content {
+            position: relative;
+            top: -95px;
+            padding: 10px 15px;
             color: var(--texte);
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
         }
         
-        .bouton.del {
-            color: var(--conflit);
+        .groupe .groupeCard .content h3 {
+            color: var(--bouton);
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .groupe .groupeCard .content .p,
+        .groupe .groupeCard .content p {
+            color: var(--texte2);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        
+        .groupe .groupeCard .content .p {
+            margin-bottom: 20px;
+        }
+        
+        .groupe .groupeCard .content a {
+            padding: 10px 20px;
+            background-color: var(--bouton);
+            border-radius: 10px;
+            color: var(--contenue);
+            cursor: pointer;
+        }
+        
+        .groupe .groupeCard:hover .content {
+            margin-top: 30px;
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0.2s;
+        }
+        
+        .cardbox-group {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            max-height: 3 b60px;
+            overflow-y: scroll;
+        }
+        
+        .cardbox-group .card-group {
+            position: relative;
+            margin-bottom: 5px;
+            background-color: var(--contenue);
+            border-radius: 10px;
+            box-shadow: 0 7px 12px var(--nuance);
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cardbox-group .card-group p {
+            color: var(--texte);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .cardbox-group .card-group p span {
+            color: var(--texte2);
+            font-size: 12px;
+        }
+        
+        .cardbox-group .card-group a {
+            color: var(--bouton);
+            font-size: 20px;
+        }
+        /* Design Responsive */
+        
+        @media(max-width:1335px) {
+            .groupe {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media(max-width:1120px) {
+            .groupe {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media(max-width:680px) {
+            .groupe {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:500px) {
+            .cardbox-group {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media(max-width:465px) {
+            .groupe {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        /* ################################################# */
+        /* Style pour la page details groupe medicament */
+        /* ################################################# */
+        
+        .details-groupe-medicament {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            overflow: hidden;
+        }
+        
+        .lst-produit {
+            position: relative;
+            width: 100%;
+            padding: 0 15px;
+            background-color: var(--contenue);
+            border-radius: 20px;
+            box-shadow: 0 7px 12px var(--nuance);
+        }
+        
+        .lst-produit .head {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .lst-produit .head h2 {
+            color: var(--bouton);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .lst-produit .containt {
+            position: relative;
+            width: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            padding-right: 10px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+        }
+        /* Design Responsive */
+        
+        @media(max-width:1310px) {
+            .lst-produit .containt {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media(max-width:870px) {
+            .lst-produit .containt {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media(max-width:680px) {
+            .lst-produit .containt {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media(max-width:500px) {
+            .lst-produit .containt {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
         /* ########################################## */
         /* Style pour la page groupe approvisionement */
@@ -3152,12 +3402,14 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 100;
             padding-top: 10vh;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
             overflow: auto;
             background-color: var(--fond);
             background-color: var(--texte2);
@@ -3166,8 +3418,9 @@
         .modal-content {
             background-color: #fefefe;
             margin: auto;
-            width: 80vh;
-            height: 80vh;
+            max-width: 600px;
+            min-width: 240px;
+            height: 80%;
             box-shadow: 0 7px 12px var(--nuance);
             border-radius: 20px;
             overflow: hidden;
@@ -3181,6 +3434,12 @@
             padding: 20px;
             background-color: var(--fond);
             align-items: center;
+        }
+        
+        .head-modal p {
+            color: var(--texte);
+            font-size: 15px;
+            font-weight: 600;
         }
         
         .close {
@@ -3225,6 +3484,22 @@
         .foot-modal span {
             color: var(--texte2);
             font-size: 11px;
+        }
+        /* Design responsive */
+        
+        @media(max-width:450px) {
+            .head-modal p {
+                font-size: 13px;
+            }
+        }
+        
+        @media(max-width:300px) {
+            .head-modal p {
+                font-size: 12px;
+            }
+            .modal-content {
+                width: 230px;
+            }
         }
         /* ########################################## */
         /* Style pour rupture de stock */
